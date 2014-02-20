@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Git hooks for jshint node module with Grunt - Caroline Aubry</title>
+  <meta name="author" content="Caroline Aubry">
+
+  
+  <meta name="description" content="Install Grunt Git hooks (Assuming that jshint is already running) This hook will be run before each commit.
+Create a package.json to be executed when &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://caubry.github.io/git-hooks-for-jshint-node-module-with-grunt">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Caroline Aubry" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <div id="header-inner">
+    <span class="first"><a href="/">Caroline Aubry</a></span>
+    <span><a href="/about">about</a></span>
+    <span><a href="/projects">projects</a></span>
+    <span class="last"><a href="/atom.xml" title="subscribe via RSS">rss</a></span>
+  </div>
+</hgroup>
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Git Hooks for Jshint Node Module With Grunt</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-11T22:34:44+00:00" pubdate data-updated="true">Feb 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><strong>Install Grunt Git hooks</strong> (Assuming that jshint is already running)</p>
+
+<p>This hook will be run before each commit.<br/>
+Create a package.json to be executed when running:</p>
+
+<pre><code>npm install
+</code></pre>
+
+<p>Or simply install grunt-githooks in the project:</p>
+
+<pre><code>npm install grunt-githooks --save-dev
+</code></pre>
+
+<p>Create/update the Gruntfile.js file<br/>
+Example:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>module.exports = function(grunt) {
+</span><span class='line'>    grunt.initConfig({
+</span><span class='line'>        jshint: {
+</span><span class='line'>          files: ['js/*'],
+</span><span class='line'>          options: {
+</span><span class='line'>            // options here to override JSHint defaults
+</span><span class='line'>            globals: {
+</span><span class='line'>              jQuery: true,
+</span><span class='line'>              console: true,
+</span><span class='line'>              module: true,
+</span><span class='line'>              document: true
+</span><span class='line'>            }
+</span><span class='line'>          }
+</span><span class='line'>        },
+</span><span class='line'>        githooks: {
+</span><span class='line'>          all: {
+</span><span class='line'>            'pre-commit': 'jshint'
+</span><span class='line'>          }
+</span><span class='line'>        }
+</span><span class='line'>    });
+</span><span class='line'>
+</span><span class='line'>    // Load tasks
+</span><span class='line'>    grunt.loadNpmTasks('grunt-contrib-jshint');
+</span><span class='line'>    grunt.loadNpmTasks('grunt-githooks');
+</span><span class='line'>
+</span><span class='line'>    // Register tasks
+</span><span class='line'>    grunt.registerTask('default', ['githooks', 'jshint']);
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Run Grunt Git Hooks as a test:</p>
+
+<pre><code>grunt githooks
+</code></pre>
+
+<p><img src="/images/githooks.png" title="Grunt Githooks Command Screenshot" alt="Grunt Githooks Command Screenshot" /></p>
+
+<p>Whenever you want to commit any install packages added as a &lsquo;pre-commit&rsquo; will run.<br/>
+Here running jshint module and abort the commit due to jshint warnings:</p>
+
+<p><img src="/images/warnings-commit.png" title="Warning Pre commit Command Screenshot" alt="Warning Pre commit Command Screenshot" /></p>
+
+<p>Once corrections have been made, you can stage them again (git add -A) and commit your files:</p>
+
+<p><img src="/images/valid-precommit.png" title="Valid Pre commit Command Screenshot" alt="Valid Pre commit Command Screenshot" /></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Caroline Aubry</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-11T22:34:44+00:00" pubdate data-updated="true">Feb 11<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://caubry.github.io/git-hooks-for-jshint-node-module-with-grunt/" data-via="" data-counturl="http://caubry.github.io/git-hooks-for-jshint-node-module-with-grunt/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/udacity-html5-game-development/" title="Previous Post: Udacity - HTML5 Game Development">&laquo; Udacity - HTML5 Game Development</a>
+      
+      
+        <a class="basic-alignment right" href="/javascript-animation-using-requestanimationframe-and-set-a-fps/" title="Next Post: JavaScript animation using requestAnimationFrame and set a FPS">JavaScript animation using requestAnimationFrame and set a FPS &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Caroline Aubry -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

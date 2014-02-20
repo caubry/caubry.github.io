@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Setting up an AS2 project using MTASC - Caroline Aubry</title>
+  <meta name="author" content="Caroline Aubry">
+
+  
+  <meta name="description" content="It&rsquo;s sometimes easy to forget the different steps in setting up your development environment as it doesn&rsquo;t often need doing. Here are the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://caubry.github.io/setting-up-an-as2-project-using-mtasc">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Caroline Aubry" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <div id="header-inner">
+    <span class="first"><a href="/">Caroline Aubry</a></span>
+    <span><a href="/about">about</a></span>
+    <span><a href="/projects">projects</a></span>
+    <span class="last"><a href="/atom.xml" title="subscribe via RSS">rss</a></span>
+  </div>
+</hgroup>
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Setting Up an AS2 Project Using MTASC</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-01T13:50:08+00:00" pubdate data-updated="true">Feb 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>It&rsquo;s sometimes easy to forget the different steps in setting up your development environment as it doesn&rsquo;t often need doing. Here are the simple steps I took when setting up MTASC for AS2.</p>
+
+<h4>Main.as</h4>
+
+<p>The static method &lsquo;main&rsquo; in Main.as will be used to run MTASC.<br/>
+This is important to include it, as MTASC will make use of it as a single point of entry.<br/>
+See &ldquo;&ndash; main&rdquo; MTASC option in <a href="#a0">run.sh</a>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import MouseTrail.Interface;
+</span><span class='line'> 
+</span><span class='line'>class MouseTrail.Main 
+</span><span class='line'>{
+</span><span class='line'>    private static var m:Main;
+</span><span class='line'>    var int:Interface;
+</span><span class='line'> 
+</span><span class='line'>    public function Main(root:MovieClip)
+</span><span class='line'>    {
+</span><span class='line'>        int = new Interface(root);
+</span><span class='line'>    }
+</span><span class='line'> 
+</span><span class='line'>    public static function main(root:MovieClip)
+</span><span class='line'>    {
+</span><span class='line'>        m = new Main(root);
+</span><span class='line'>    }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Interface.as</h4>
+
+<p>You can now use any Classes you want from your library, because of the &ldquo;-cp&rdquo; MTASC option.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class MouseTrail.Interface
+</span><span class='line'>{
+</span><span class='line'>    private var pen:MovieClip;
+</span><span class='line'> 
+</span><span class='line'>    public function Interface (root:MovieClip)
+</span><span class='line'>    {
+</span><span class='line'>        var c:MovieClip= root.createEmptyMovieClip("test", root.getNextHighestDepth());
+</span><span class='line'>        
+</span><span class='line'>        // Do something
+</span><span class='line'>    }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a name="a0">run.sh</a></p>
+
+<p>This script contains the MTASC command line, with four options:</p>
+
+<ul>
+<li>&ldquo;-swf&rdquo; refers to your input.</li>
+<li>&ldquo;-main&rdquo; refers to your static method (see above).</li>
+<li>&ldquo;-out&rdquo; refers to your output.</li>
+<li>&ldquo;-cp&rdquo; refers to your classes root folder.</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># !/bin/bash
+</span><span class='line'>ROOT= ~/Desktop/TODO
+</span><span class='line'>mtasc $ROOT/mousetrail/src/MouseTrail/Main.as -main 
+</span><span class='line'>-swf $ROOT/mousetrail/bin/mouseTrail.swf 
+</span><span class='line'>-out $ROOT/mousetrail/bin/Interface.swf 
+</span><span class='line'>-cp $ROOT/mousetrail/src
+</span><span class='line'>open $ROOT/mousetrail/bin/Interface.swf</span></code></pre></td></tr></table></div></figure>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Caroline Aubry</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-01T13:50:08+00:00" pubdate data-updated="true">Feb 1<span>st</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://caubry.github.io/setting-up-an-as2-project-using-mtasc/" data-via="" data-counturl="http://caubry.github.io/setting-up-an-as2-project-using-mtasc/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/flashdevelop-for-as3/" title="Previous Post: Setting up FlashDevelop for AS3">&laquo; Setting up FlashDevelop for AS3</a>
+      
+      
+        <a class="basic-alignment right" href="/extract-assets-from-a-swf-using-swfttools/" title="Next Post: Extract assets from a SWF - Using swfttools">Extract assets from a SWF - Using swfttools &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Caroline Aubry -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

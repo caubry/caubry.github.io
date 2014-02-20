@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Setting up FlashDevelop for AS3 - Caroline Aubry</title>
+  <meta name="author" content="Caroline Aubry">
+
+  
+  <meta name="description" content="I was recently refreshing my memory over how to set up FlashDevelop, but was unable to find any sufficient resources on the Web. So here it is: After &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://caubry.github.io/flashdevelop-for-as3">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Caroline Aubry" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <div id="header-inner">
+    <span class="first"><a href="/">Caroline Aubry</a></span>
+    <span><a href="/about">about</a></span>
+    <span><a href="/projects">projects</a></span>
+    <span class="last"><a href="/atom.xml" title="subscribe via RSS">rss</a></span>
+  </div>
+</hgroup>
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Setting Up FlashDevelop for AS3</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-03T19:01:39+01:00" pubdate data-updated="true">Oct 3<span>rd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I was recently refreshing my memory over how to set up FlashDevelop, but was unable to find any sufficient resources on the Web.</p>
+
+<p>So here it is:</p>
+
+<p>After installing FlashDevlop, open Adobe Flash.</p>
+
+<p>Create a new Document: File > New&hellip; > ActionScript 3.0 and on the properties tab, add a name to your class, commonly named &ldquo;Main&rdquo;:</p>
+
+<p><img src="/images/nameclass.png" title="ActionScript 3.0 Class" alt="ActionScript 3.0 Class" /></p>
+
+<p><strong>Save your Adobe Flash file into an empty folder.</strong></p>
+
+<p>Launch FlashDevelop.exe and create a new project:<br/>
+Project > New Project&hellip; > Under ActionScript 3, select Flash IDE Project:</p>
+
+<p><img src="/images/newproject.png" title="FlashDevelop - Create new projet" alt="FlashDevelop - Create new projet" /></p>
+
+<p>Give a name to your new project and choose the <strong>same location as your Adobe Flash project.</strong><br/>
+Make sure &ldquo;create directory for project&rdquo; is un-ticked:</p>
+
+<p><img src="/images/namefd.png" title="FlashDevelop - Create a directory" alt="FlashDevelop - Create a directory" /></p>
+
+<p>When clicking OK, a warning popup will appear. Do not worry, this is only because you have a Flash file already in this folder.</p>
+
+<p>Click OK.</p>
+
+<p><img src="/images/warning.png" title="FlashDevelop - Warning" alt="FlashDevelop - Warning" /></p>
+
+<p>If FlashDevelop requests it, choose an author name.<br/>
+Create a New Class by right clicking through the main project folder in the right sidebar: Add > New Class&hellip;</p>
+
+<p><img src="/images/newclass.png" title="FlashDevelop - New Class" alt="FlashDevelop - New Class" /></p>
+
+<p>Give the same Class name as the one you&rsquo;ve previously created on Adobe Flash.<br/>
+Extend the MovieClip class, and FlashDevelop will automatically add the line to import the library MovieClip library.<br/>
+Run a trace like so:</p>
+
+<p><img src="/images/mainclass.png" title="FlashDevelop - Main Class" alt="FlashDevelop - Main Class" /></p>
+
+<p>At this point, your script won&rsquo;t run, as you need a MovieClip, so go ahead and create one (Insert > New Symbol&hellip;).<br/>
+Give your MovieClip a name and make sure to tick &ldquo;Export for ActionScript&rdquo;.</p>
+
+<p>Click OK.</p>
+
+<p><img src="/images/newsymbol.png" title="FlashDevelop - New Symbol" alt="FlashDevelop - New Symbol" /></p>
+
+<p>Draw something and save it.</p>
+
+<p><img src="/images/randomsymbol.png" title="FlashDevelop - Random Symbol" alt="FlashDevelop - Random Symbol" /></p>
+
+<p>You should now be able to run your script from FlashDevelop and/or Adobe Flash by pressing Ctrl + Enter.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Caroline Aubry</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-10-03T19:01:39+01:00" pubdate data-updated="true">Oct 3<span>rd</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://caubry.github.io/flashdevelop-for-as3/" data-via="" data-counturl="http://caubry.github.io/flashdevelop-for-as3/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/setting-up-an-as2-project-using-mtasc/" title="Next Post: Setting up an AS2 project using MTASC">Setting up an AS2 project using MTASC &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Caroline Aubry -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

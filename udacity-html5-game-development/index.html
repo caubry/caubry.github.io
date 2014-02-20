@@ -1,319 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Caroline Aubry]]></title>
-  <link href="http://caubry.github.io/atom.xml" rel="self"/>
-  <link href="http://caubry.github.io/"/>
-  <updated>2014-02-20T23:43:27+00:00</updated>
-  <id>http://caubry.github.io/</id>
-  <author>
-    <name><![CDATA[Caroline Aubry]]></name>
-    <email><![CDATA[caroline@carolineaubry.com]]></email>
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Udacity - HTML5 Game Development - Caroline Aubry</title>
+  <meta name="author" content="Caroline Aubry">
 
   
-  <entry>
-    <title type="html"><![CDATA[JavaScript animation using requestAnimationFrame and set a FPS]]></title>
-    <link href="http://caubry.github.io/javascript-animation-using-requestanimationframe-and-set-a-fps/"/>
-    <updated>2014-02-14T16:11:51+00:00</updated>
-    <id>http://caubry.github.io/javascript-animation-using-requestanimationframe-and-set-a-fps</id>
-    <content type="html"><![CDATA[<p>Commonly, creating animations in JavaScript requires the use of <strong>setTimeout</strong> and/or <strong>setInterval</strong>.
-Unfortunately, relying on these methods only can cause issues to the users, as elucidated to on the <a href="http://creativejs.com/resources/requestanimationframe/">CreativeJS site</a>. When using <strong>setTimeout</strong>, the browser doesn&rsquo;t take into consideration if the page has been hidden behind a tab and can cause some CPU and/or animation issues. This method also doesn&rsquo;t take into account computer performance and will contently try to update the page, disregarding CPU usage.<br/>
-Clearly not good for the lifetime of any device&hellip;<br/>
-Modern browsers such as Mozilla, Chrome and Safari offer an alternative to the methods above, with a <strong>requestAnimationFrame</strong> function. It provides a native API for running any type of animation in the browser.<br/>
-Unfortunately, as it&rsquo;s an API, it&rsquo;s only currently available in browsers via a vendor prefix.<br/>
-Luckily, Eric M&ouml;ller, Paul Irish and Tino Zijdel have created a <a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">polyfill</a> to get around this issue:<br/>
-<a href="https://gist.github.com/paulirish/1579671">(Gist)</a></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-</span><span class='line'>// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating 
-</span><span class='line'>// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
-</span><span class='line'>// MIT license
-</span><span class='line'> 
-</span><span class='line'>(function() {
-</span><span class='line'>    var lastTime = 0;
-</span><span class='line'>    var vendors = ['ms', 'moz', 'webkit', 'o'];
-</span><span class='line'>    for(var x = 0; x &lt; vendors.length && !window.requestAnimationFrame; ++x) {
-</span><span class='line'>        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-</span><span class='line'>        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
-</span><span class='line'>                                   || window[vendors[x]+'CancelRequestAnimationFrame'];
-</span><span class='line'>    }
-</span><span class='line'> 
-</span><span class='line'>    if (!window.requestAnimationFrame)
-</span><span class='line'>        window.requestAnimationFrame = function(callback, element) {
-</span><span class='line'>            var currTime = new Date().getTime();
-</span><span class='line'>            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-</span><span class='line'>            var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
-</span><span class='line'>              timeToCall);
-</span><span class='line'>            lastTime = currTime + timeToCall;
-</span><span class='line'>            return id;
-</span><span class='line'>        };
-</span><span class='line'> 
-</span><span class='line'>    if (!window.cancelAnimationFrame)
-</span><span class='line'>        window.cancelAnimationFrame = function(id) {
-</span><span class='line'>            clearTimeout(id);
-</span><span class='line'>        };
-</span><span class='line'>}());</span></code></pre></td></tr></table></div></figure>
-
-
-<p>You can just use this polyfill like so:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>requestId: 0,
-</span><span class='line'>move: function() {
-</span><span class='line'>  var _this = this;
-</span><span class='line'> 
-</span><span class='line'>  if (this.requestId === 0) {
-</span><span class='line'>    (function animationLoop() {
-</span><span class='line'>      _this.render();
-</span><span class='line'>      _this.requestId = requestAnimationFrame(animationLoop, _this.move);
-</span><span class='line'>    })();
-</span><span class='line'>  }
-</span><span class='line'>},
-</span><span class='line'> 
-</span><span class='line'>render: function() {
-</span><span class='line'>  // Add some drawing
-</span><span class='line'>},
-</span><span class='line'> 
-</span><span class='line'>onKeyUp: function() {
-</span><span class='line'>  // Cancel the animation request
-</span><span class='line'>  if (this.requestId) {
-</span><span class='line'>    cancelAnimationFrame(this.requestId);
-</span><span class='line'>  }
-</span><span class='line'>  // Allow a new request to be called
-</span><span class='line'>  this.requestId = 0;
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>That works fine!<br/>
-Unfortunately, this doesn&rsquo;t take into account the FPS (frame per seconds) of your game. A work around is to use the method <strong>setTimeout</strong> in conjunction with the polyfill, such as:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>requestId: 0,
-</span><span class='line'>settimeoutID: 0,
-</span><span class='line'> 
-</span><span class='line'>move: function(keyCode) {
-</span><span class='line'>  var _this = this;
-</span><span class='line'>  // Frame per seconds
-</span><span class='line'>  var fps = 15;
-</span><span class='line'>  
-</span><span class='line'>  if (this.requestId === 0) {
-</span><span class='line'>    (function animationLoop() {
-</span><span class='line'>      // Control the timing of an animation with requestAnimationFrame
-</span><span class='line'>      _this.settimeoutID = setTimeout(function() {
-</span><span class='line'>        _this.render();
-</span><span class='line'>        _this.requestId = requestAnimationFrame(animationLoop, _this.move);
-</span><span class='line'>      }, 1000 / fps);
-</span><span class='line'>    })();
-</span><span class='line'>  }
-</span><span class='line'>},
-</span><span class='line'> 
-</span><span class='line'>render: function() {
-</span><span class='line'>  // Add some drawing
-</span><span class='line'>},
-</span><span class='line'> 
-</span><span class='line'>onKeyUp: function() {
-</span><span class='line'>  // Cancel the animation request
-</span><span class='line'>  if (this.requestId) {
-</span><span class='line'>    clearTimeout(this.settimeoutID);
-</span><span class='line'>    cancelAnimationFrame(this.requestId);
-</span><span class='line'>  }
-</span><span class='line'>  // Allow a new request to be called
-</span><span class='line'>  this.requestId = 0;
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Of course, using this method allows anyone to easily change the FPS and most importantly, controls the timing of an animation across multiple browsers.</p>
-]]></content>
-  </entry>
+  <meta name="description" content="Hey all &amp; Happy New Year! A decision has been made&hellip; it&rsquo;s time for me to start on a new course related to Game Development.
+Last year &hellip;">
   
-  <entry>
-    <title type="html"><![CDATA[Git hooks for jshint node module with Grunt]]></title>
-    <link href="http://caubry.github.io/git-hooks-for-jshint-node-module-with-grunt/"/>
-    <updated>2014-02-11T22:34:44+00:00</updated>
-    <id>http://caubry.github.io/git-hooks-for-jshint-node-module-with-grunt</id>
-    <content type="html"><![CDATA[<p><strong>Install Grunt Git hooks</strong> (Assuming that jshint is already running)</p>
 
-<p>This hook will be run before each commit.<br/>
-Create a package.json to be executed when running:</p>
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<pre><code>npm install
-</code></pre>
-
-<p>Or simply install grunt-githooks in the project:</p>
-
-<pre><code>npm install grunt-githooks --save-dev
-</code></pre>
-
-<p>Create/update the Gruntfile.js file<br/>
-Example:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>module.exports = function(grunt) {
-</span><span class='line'>    grunt.initConfig({
-</span><span class='line'>        jshint: {
-</span><span class='line'>          files: ['js/*'],
-</span><span class='line'>          options: {
-</span><span class='line'>            // options here to override JSHint defaults
-</span><span class='line'>            globals: {
-</span><span class='line'>              jQuery: true,
-</span><span class='line'>              console: true,
-</span><span class='line'>              module: true,
-</span><span class='line'>              document: true
-</span><span class='line'>            }
-</span><span class='line'>          }
-</span><span class='line'>        },
-</span><span class='line'>        githooks: {
-</span><span class='line'>          all: {
-</span><span class='line'>            'pre-commit': 'jshint'
-</span><span class='line'>          }
-</span><span class='line'>        }
-</span><span class='line'>    });
-</span><span class='line'>
-</span><span class='line'>    // Load tasks
-</span><span class='line'>    grunt.loadNpmTasks('grunt-contrib-jshint');
-</span><span class='line'>    grunt.loadNpmTasks('grunt-githooks');
-</span><span class='line'>
-</span><span class='line'>    // Register tasks
-</span><span class='line'>    grunt.registerTask('default', ['githooks', 'jshint']);
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Run Grunt Git Hooks as a test:</p>
-
-<pre><code>grunt githooks
-</code></pre>
-
-<p><img src="http://caubry.github.io/images/githooks.png" title="Grunt Githooks Command Screenshot" alt="Grunt Githooks Command Screenshot" /></p>
-
-<p>Whenever you want to commit any install packages added as a &lsquo;pre-commit&rsquo; will run.<br/>
-Here running jshint module and abort the commit due to jshint warnings:</p>
-
-<p><img src="http://caubry.github.io/images/warnings-commit.png" title="Warning Pre commit Command Screenshot" alt="Warning Pre commit Command Screenshot" /></p>
-
-<p>Once corrections have been made, you can stage them again (git add -A) and commit your files:</p>
-
-<p><img src="http://caubry.github.io/images/valid-precommit.png" title="Valid Pre commit Command Screenshot" alt="Valid Pre commit Command Screenshot" /></p>
-]]></content>
-  </entry>
   
-  <entry>
-    <title type="html"><![CDATA[Udacity - HTML5 Game Development]]></title>
-    <link href="http://caubry.github.io/udacity-html5-game-development/"/>
-    <updated>2014-01-15T13:17:14+00:00</updated>
-    <id>http://caubry.github.io/udacity-html5-game-development</id>
-    <content type="html"><![CDATA[<p>Hey all &amp; Happy New Year!</p>
+  <link rel="canonical" href="http://caubry.github.io/udacity-html5-game-development">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Caroline Aubry" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <div id="header-inner">
+    <span class="first"><a href="/">Caroline Aubry</a></span>
+    <span><a href="/about">about</a></span>
+    <span><a href="/projects">projects</a></span>
+    <span class="last"><a href="/atom.xml" title="subscribe via RSS">rss</a></span>
+  </div>
+</hgroup>
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Udacity - HTML5 Game Development</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-15T13:17:14+00:00" pubdate data-updated="true">Jan 15<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Hey all &amp; Happy New Year!</p>
 
 <p>A decision has been made&hellip; it&rsquo;s time for me to start on a new course related to Game Development.<br/>
 Last year, I took a few online courses on <a href="https://www.coursera.org/course/startup/">Coursera</a> and I loved them : ]<br/>
@@ -1761,291 +1523,96 @@ function getAssetTypeFromExtension(fname) {
     return -1;
 }
 </code></pre>
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <entry>
-    <title type="html"><![CDATA[Extract assets from a SWF - Using swfttools]]></title>
-    <link href="http://caubry.github.io/extract-assets-from-a-swf-using-swfttools/"/>
-    <updated>2013-10-16T16:08:21+01:00</updated>
-    <id>http://caubry.github.io/extract-assets-from-a-swf-using-swfttools</id>
-    <content type="html"><![CDATA[<p>Today, I was wondering if it was possible to extract assets from a SWF file.<br/>
-The answer is YES it is! And it isn&rsquo;t too hard either.</p>
 
-<ul>
-<li><strong>Download swftools</strong></li>
-</ul>
+<span class="byline author vcard">Posted by <span class="fn">Caroline Aubry</span></span>
+
+      
 
 
-<p>Firstly, <strong>get/download a SWF</strong> file from your machine/the internet : ]<br/>
-Then, you can either download the <strong>swfttools</strong> as an EXE or as a TAR at: <a href="http://www.swftools.org/download.html">http://www.swftools.org/download.html</a><br/>
-If you are a <strong>Github</strong> lover, simply grab the repo, such as:</p>
-
-<pre><code>git clone git://git.swftools.org/swftools
-</code></pre>
-
-<p>In order to extract assets from a SWF file, you can use the <strong>SWFExtract program</strong> provided with <strong>swftools</strong>.<br/>
-If you wish to see more information on different programs that swftools offers, visit this page: <a href="http://www.swftools.org/about.html">http://www.swftools.org/about.html</a>.</p>
-
-<ul>
-<li><strong>Install swftools</strong></li>
-</ul>
 
 
-<p>There are two ways to install swftools, by the source code (recommended for Unix/Linux/BSD) or by running a binary file (recommended for Windows).<br/>
-Further information can be found at: <a href="http://wiki.swftools.org/wiki/Installation">http://wiki.swftools.org/wiki/Installation</a>.<br/>
-Once the installation is over, you should be able to run, in your command line &lsquo;man swfextract&rsquo; and get the manual for this specific program.<br/>
-If you can&rsquo;t achieve this, please refer back to the installation guide, as you might have missed a trick or two:</p>
-
-<p><strong>Let the fun begin!</strong></p>
-
-<p>I&rsquo;ve downloaded a panda.swf and I&rsquo;ve saved it on my Desktop.<br/>
-If I wish to see what is inside this file, I can simply run this command from my Desktop directory:</p>
-
-<pre><code>swfextract panda.swf
-</code></pre>
-
-<p>Now, I&rsquo;m getting something like:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Objects in file panda.swf:
-</span><span class='line'>  [-i] 36 Shapes: ID(s) 28, 30, 33, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 87, 91, 119, 120, 123, 129, 130, 143
-</span><span class='line'>  [-i] 9 MovieClips: ID(s) 31, 34, 35, 135, 136, 144, 147, 175, 191
-</span><span class='line'>  [-j] 2 JPEGs: ID(s) 27, 86
-</span><span class='line'>  [-p] 2 PNGs: ID(s) 29, 32
-</span><span class='line'>  [-s] 26 Sounds: ID(s) 2-26, 92
-</span><span class='line'>  [-F] 4 Fonts: ID(s) 88, 126, 149, 181
-</span><span class='line'>  [-M] 8 Embedded MP3s: ID(s) 31, 34, 35, 136, 144, 147, 175, 191
-</span><span class='line'>  [-f] 1 Frame: ID(s) 0
-</span><span class='line'>  [-m] 1 MP3 Soundstream</span></code></pre></td></tr></table></div></figure>
 
 
-<p>You might also get something with Binarys, like:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Objects in file panda.swf:
-</span><span class='line'>  [-i] 1 Shape: ID(s) 1
-</span><span class='line'>  [-b] 2 Binarys: ID(s) 2, 3
-</span><span class='line'>  [-f] 1 Frame: ID(s) 0</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Note that Binarys can hold a second SWF file =o<br/>
-To output a binary into a custon file name, such as myBinaryFile, simply run:</p>
-
-<pre><code>swfextract -b 2 panda.swf -o myBinaryFile
-</code></pre>
-
-<p>details:</p>
-
-<pre><code>swfextract -b [ID] [input file] -o [output file]
-</code></pre>
-
-<p>Note that I didn&rsquo;t give an extension name to the output, so you can test if it is a Flash file, by simply open it.<br/>
-You should get a Flash error&hellip; if you do, you know it&rsquo;s a Flash file : D<br/>
-If you don&rsquo;t, you might want to try a different Binarys ID.</p>
-
-<p>If it is a Flash file, you can output it the same way as earlier, using swfextract:</p>
-
-<pre><code>swfextract myBinaryFile
-</code></pre>
-
-<p>In this example, taken from panda.swf, I want to extract the sounds from 2 to 26 and the 92 one.</p>
-
-<pre><code>[-s] 26 Sounds: ID(s) 2-26, 92
-</code></pre>
-
-<p>Sounds will be placed into a folder named &lsquo;sounds&rsquo;, in the current directory:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># !/bin/bash
-</span><span class='line'>for NUM in {2..26} 92
-</span><span class='line'>do
-</span><span class='line'>    swfextract -s $NUM panda.swf -o "sounds/sound_$NUM.mp3"
-</span><span class='line'>done</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
   
-  <entry>
-    <title type="html"><![CDATA[Setting up an AS2 project using MTASC]]></title>
-    <link href="http://caubry.github.io/setting-up-an-as2-project-using-mtasc/"/>
-    <updated>2013-02-01T13:50:08+00:00</updated>
-    <id>http://caubry.github.io/setting-up-an-as2-project-using-mtasc</id>
-    <content type="html"><![CDATA[<p>It&rsquo;s sometimes easy to forget the different steps in setting up your development environment as it doesn&rsquo;t often need doing. Here are the simple steps I took when setting up MTASC for AS2.</p>
-
-<h4>Main.as</h4>
-
-<p>The static method &lsquo;main&rsquo; in Main.as will be used to run MTASC.<br/>
-This is important to include it, as MTASC will make use of it as a single point of entry.<br/>
-See &ldquo;&ndash; main&rdquo; MTASC option in <a href="#a0">run.sh</a>.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>import MouseTrail.Interface;
-</span><span class='line'> 
-</span><span class='line'>class MouseTrail.Main 
-</span><span class='line'>{
-</span><span class='line'>    private static var m:Main;
-</span><span class='line'>    var int:Interface;
-</span><span class='line'> 
-</span><span class='line'>    public function Main(root:MovieClip)
-</span><span class='line'>    {
-</span><span class='line'>        int = new Interface(root);
-</span><span class='line'>    }
-</span><span class='line'> 
-</span><span class='line'>    public static function main(root:MovieClip)
-</span><span class='line'>    {
-</span><span class='line'>        m = new Main(root);
-</span><span class='line'>    }
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
 
-<h4>Interface.as</h4>
-
-<p>You can now use any Classes you want from your library, because of the &ldquo;-cp&rdquo; MTASC option.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>class MouseTrail.Interface
-</span><span class='line'>{
-</span><span class='line'>    private var pen:MovieClip;
-</span><span class='line'> 
-</span><span class='line'>    public function Interface (root:MovieClip)
-</span><span class='line'>    {
-</span><span class='line'>        var c:MovieClip= root.createEmptyMovieClip("test", root.getNextHighestDepth());
-</span><span class='line'>        
-</span><span class='line'>        // Do something
-</span><span class='line'>    }
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+<time datetime="2014-01-15T13:17:14+00:00" pubdate data-updated="true">Jan 15<span>th</span>, 2014</time>
+      
 
 
-<p><a name="a0">run.sh</a></p>
-
-<p>This script contains the MTASC command line, with four options:</p>
-
-<ul>
-<li>&ldquo;-swf&rdquo; refers to your input.</li>
-<li>&ldquo;-main&rdquo; refers to your static method (see above).</li>
-<li>&ldquo;-out&rdquo; refers to your output.</li>
-<li>&ldquo;-cp&rdquo; refers to your classes root folder.</li>
-</ul>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># !/bin/bash
-</span><span class='line'>ROOT= ~/Desktop/TODO
-</span><span class='line'>mtasc $ROOT/mousetrail/src/MouseTrail/Main.as -main 
-</span><span class='line'>-swf $ROOT/mousetrail/bin/mouseTrail.swf 
-</span><span class='line'>-out $ROOT/mousetrail/bin/Interface.swf 
-</span><span class='line'>-cp $ROOT/mousetrail/src
-</span><span class='line'>open $ROOT/mousetrail/bin/Interface.swf</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
+    </p>
+    
+      <div class="sharing">
   
-  <entry>
-    <title type="html"><![CDATA[Setting up FlashDevelop for AS3]]></title>
-    <link href="http://caubry.github.io/flashdevelop-for-as3/"/>
-    <updated>2012-10-03T19:01:39+01:00</updated>
-    <id>http://caubry.github.io/flashdevelop-for-as3</id>
-    <content type="html"><![CDATA[<p>I was recently refreshing my memory over how to set up FlashDevelop, but was unable to find any sufficient resources on the Web.</p>
-
-<p>So here it is:</p>
-
-<p>After installing FlashDevlop, open Adobe Flash.</p>
-
-<p>Create a new Document: File > New&hellip; > ActionScript 3.0 and on the properties tab, add a name to your class, commonly named &ldquo;Main&rdquo;:</p>
-
-<p><img src="http://caubry.github.io/images/nameclass.png" title="ActionScript 3.0 Class" alt="ActionScript 3.0 Class" /></p>
-
-<p><strong>Save your Adobe Flash file into an empty folder.</strong></p>
-
-<p>Launch FlashDevelop.exe and create a new project:<br/>
-Project > New Project&hellip; > Under ActionScript 3, select Flash IDE Project:</p>
-
-<p><img src="http://caubry.github.io/images/newproject.png" title="FlashDevelop - Create new projet" alt="FlashDevelop - Create new projet" /></p>
-
-<p>Give a name to your new project and choose the <strong>same location as your Adobe Flash project.</strong><br/>
-Make sure &ldquo;create directory for project&rdquo; is un-ticked:</p>
-
-<p><img src="http://caubry.github.io/images/namefd.png" title="FlashDevelop - Create a directory" alt="FlashDevelop - Create a directory" /></p>
-
-<p>When clicking OK, a warning popup will appear. Do not worry, this is only because you have a Flash file already in this folder.</p>
-
-<p>Click OK.</p>
-
-<p><img src="http://caubry.github.io/images/warning.png" title="FlashDevelop - Warning" alt="FlashDevelop - Warning" /></p>
-
-<p>If FlashDevelop requests it, choose an author name.<br/>
-Create a New Class by right clicking through the main project folder in the right sidebar: Add > New Class&hellip;</p>
-
-<p><img src="http://caubry.github.io/images/newclass.png" title="FlashDevelop - New Class" alt="FlashDevelop - New Class" /></p>
-
-<p>Give the same Class name as the one you&rsquo;ve previously created on Adobe Flash.<br/>
-Extend the MovieClip class, and FlashDevelop will automatically add the line to import the library MovieClip library.<br/>
-Run a trace like so:</p>
-
-<p><img src="http://caubry.github.io/images/mainclass.png" title="FlashDevelop - Main Class" alt="FlashDevelop - Main Class" /></p>
-
-<p>At this point, your script won&rsquo;t run, as you need a MovieClip, so go ahead and create one (Insert > New Symbol&hellip;).<br/>
-Give your MovieClip a name and make sure to tick &ldquo;Export for ActionScript&rdquo;.</p>
-
-<p>Click OK.</p>
-
-<p><img src="http://caubry.github.io/images/newsymbol.png" title="FlashDevelop - New Symbol" alt="FlashDevelop - New Symbol" /></p>
-
-<p>Draw something and save it.</p>
-
-<p><img src="http://caubry.github.io/images/randomsymbol.png" title="FlashDevelop - Random Symbol" alt="FlashDevelop - Random Symbol" /></p>
-
-<p>You should now be able to run your script from FlashDevelop and/or Adobe Flash by pressing Ctrl + Enter.</p>
-]]></content>
-  </entry>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://caubry.github.io/udacity-html5-game-development/" data-via="" data-counturl="http://caubry.github.io/udacity-html5-game-development/" >Tweet</a>
   
-</feed>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/extract-assets-from-a-swf-using-swfttools/" title="Previous Post: Extract assets from a SWF - Using swfttools">&laquo; Extract assets from a SWF - Using swfttools</a>
+      
+      
+        <a class="basic-alignment right" href="/git-hooks-for-jshint-node-module-with-grunt/" title="Next Post: Git hooks for jshint node module with Grunt">Git hooks for jshint node module with Grunt &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Caroline Aubry -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

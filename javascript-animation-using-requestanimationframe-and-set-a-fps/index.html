@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript animation using requestAnimationFrame and set a FPS - Caroline Aubry</title>
+  <meta name="author" content="Caroline Aubry">
+
+  
+  <meta name="description" content="Commonly, creating animations in JavaScript requires the use of setTimeout and/or setInterval.
+Unfortunately, relying on these methods only can cause &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://caubry.github.io/javascript-animation-using-requestanimationframe-and-set-a-fps">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Caroline Aubry" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <div id="header-inner">
+    <span class="first"><a href="/">Caroline Aubry</a></span>
+    <span><a href="/about">about</a></span>
+    <span><a href="/projects">projects</a></span>
+    <span class="last"><a href="/atom.xml" title="subscribe via RSS">rss</a></span>
+  </div>
+</hgroup>
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">JavaScript Animation Using requestAnimationFrame and Set a FPS</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-14T16:11:51+00:00" pubdate data-updated="true">Feb 14<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Commonly, creating animations in JavaScript requires the use of <strong>setTimeout</strong> and/or <strong>setInterval</strong>.
+Unfortunately, relying on these methods only can cause issues to the users, as elucidated to on the <a href="http://creativejs.com/resources/requestanimationframe/">CreativeJS site</a>. When using <strong>setTimeout</strong>, the browser doesn&rsquo;t take into consideration if the page has been hidden behind a tab and can cause some CPU and/or animation issues. This method also doesn&rsquo;t take into account computer performance and will contently try to update the page, disregarding CPU usage.<br/>
+Clearly not good for the lifetime of any device&hellip;<br/>
+Modern browsers such as Mozilla, Chrome and Safari offer an alternative to the methods above, with a <strong>requestAnimationFrame</strong> function. It provides a native API for running any type of animation in the browser.<br/>
+Unfortunately, as it&rsquo;s an API, it&rsquo;s only currently available in browsers via a vendor prefix.<br/>
+Luckily, Eric M&ouml;ller, Paul Irish and Tino Zijdel have created a <a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">polyfill</a> to get around this issue:<br/>
+<a href="https://gist.github.com/paulirish/1579671">(Gist)</a></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+</span><span class='line'>// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating 
+</span><span class='line'>// requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+</span><span class='line'>// MIT license
+</span><span class='line'> 
+</span><span class='line'>(function() {
+</span><span class='line'>    var lastTime = 0;
+</span><span class='line'>    var vendors = ['ms', 'moz', 'webkit', 'o'];
+</span><span class='line'>    for(var x = 0; x &lt; vendors.length && !window.requestAnimationFrame; ++x) {
+</span><span class='line'>        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+</span><span class='line'>        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+</span><span class='line'>                                   || window[vendors[x]+'CancelRequestAnimationFrame'];
+</span><span class='line'>    }
+</span><span class='line'> 
+</span><span class='line'>    if (!window.requestAnimationFrame)
+</span><span class='line'>        window.requestAnimationFrame = function(callback, element) {
+</span><span class='line'>            var currTime = new Date().getTime();
+</span><span class='line'>            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+</span><span class='line'>            var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+</span><span class='line'>              timeToCall);
+</span><span class='line'>            lastTime = currTime + timeToCall;
+</span><span class='line'>            return id;
+</span><span class='line'>        };
+</span><span class='line'> 
+</span><span class='line'>    if (!window.cancelAnimationFrame)
+</span><span class='line'>        window.cancelAnimationFrame = function(id) {
+</span><span class='line'>            clearTimeout(id);
+</span><span class='line'>        };
+</span><span class='line'>}());</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can just use this polyfill like so:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>requestId: 0,
+</span><span class='line'>move: function() {
+</span><span class='line'>  var _this = this;
+</span><span class='line'> 
+</span><span class='line'>  if (this.requestId === 0) {
+</span><span class='line'>    (function animationLoop() {
+</span><span class='line'>      _this.render();
+</span><span class='line'>      _this.requestId = requestAnimationFrame(animationLoop, _this.move);
+</span><span class='line'>    })();
+</span><span class='line'>  }
+</span><span class='line'>},
+</span><span class='line'> 
+</span><span class='line'>render: function() {
+</span><span class='line'>  // Add some drawing
+</span><span class='line'>},
+</span><span class='line'> 
+</span><span class='line'>onKeyUp: function() {
+</span><span class='line'>  // Cancel the animation request
+</span><span class='line'>  if (this.requestId) {
+</span><span class='line'>    cancelAnimationFrame(this.requestId);
+</span><span class='line'>  }
+</span><span class='line'>  // Allow a new request to be called
+</span><span class='line'>  this.requestId = 0;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That works fine!<br/>
+Unfortunately, this doesn&rsquo;t take into account the FPS (frame per seconds) of your game. A work around is to use the method <strong>setTimeout</strong> in conjunction with the polyfill, such as:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>requestId: 0,
+</span><span class='line'>settimeoutID: 0,
+</span><span class='line'> 
+</span><span class='line'>move: function(keyCode) {
+</span><span class='line'>  var _this = this;
+</span><span class='line'>  // Frame per seconds
+</span><span class='line'>  var fps = 15;
+</span><span class='line'>  
+</span><span class='line'>  if (this.requestId === 0) {
+</span><span class='line'>    (function animationLoop() {
+</span><span class='line'>      // Control the timing of an animation with requestAnimationFrame
+</span><span class='line'>      _this.settimeoutID = setTimeout(function() {
+</span><span class='line'>        _this.render();
+</span><span class='line'>        _this.requestId = requestAnimationFrame(animationLoop, _this.move);
+</span><span class='line'>      }, 1000 / fps);
+</span><span class='line'>    })();
+</span><span class='line'>  }
+</span><span class='line'>},
+</span><span class='line'> 
+</span><span class='line'>render: function() {
+</span><span class='line'>  // Add some drawing
+</span><span class='line'>},
+</span><span class='line'> 
+</span><span class='line'>onKeyUp: function() {
+</span><span class='line'>  // Cancel the animation request
+</span><span class='line'>  if (this.requestId) {
+</span><span class='line'>    clearTimeout(this.settimeoutID);
+</span><span class='line'>    cancelAnimationFrame(this.requestId);
+</span><span class='line'>  }
+</span><span class='line'>  // Allow a new request to be called
+</span><span class='line'>  this.requestId = 0;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Of course, using this method allows anyone to easily change the FPS and most importantly, controls the timing of an animation across multiple browsers.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Caroline Aubry</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-14T16:11:51+00:00" pubdate data-updated="true">Feb 14<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://caubry.github.io/javascript-animation-using-requestanimationframe-and-set-a-fps/" data-via="" data-counturl="http://caubry.github.io/javascript-animation-using-requestanimationframe-and-set-a-fps/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/git-hooks-for-jshint-node-module-with-grunt/" title="Previous Post: Git hooks for jshint node module with Grunt">&laquo; Git hooks for jshint node module with Grunt</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Caroline Aubry -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
