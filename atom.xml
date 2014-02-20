@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Caroline Aubry]]></title>
+  <link href="http://caubry.github.io/atom.xml" rel="self"/>
+  <link href="http://caubry.github.io/"/>
+  <updated>2014-02-20T20:24:33+00:00</updated>
+  <id>http://caubry.github.io/</id>
+  <author>
+    <name><![CDATA[Caroline Aubry]]></name>
+    <email><![CDATA[caroline@carolineaubry.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[First Post]]></title>
+    <link href="http://caubry.github.io/first-post/"/>
+    <updated>2014-02-20T20:24:13+00:00</updated>
+    <id>http://caubry.github.io/first-post</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>
