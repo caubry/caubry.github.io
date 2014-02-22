@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://caubry.github.io/sitemap.xml 
