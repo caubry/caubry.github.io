@@ -1,0 +1,17 @@
+- name: Bomberman
+  image: /images/bomberman.png
+  link: https://github.com/caubry/bomberman
+  status: In development
+  description: A simple HML5 game copy of Bomberman with websocket.
+
+- name: Image Compression
+  image: /images/imageCompression.png
+  link: https://gist.github.com/caubry/7103438
+  status: Ongoing development
+  description: Bash script using pngquant and jpegoptim library to compress PNG JPG and JPEG with batch compression as an option.
+
+# - name: HoneyTrail
+#   image: /images/honeytrail.png
+#   link: https://gist.github.com/caubry/7103438
+#   status: Completed
+#   description: ActionScript 3 Side scrolling mini-game using right mouse click in order to gather objects and collect points.

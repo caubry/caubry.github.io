@@ -1,5 +1,4 @@
 body {
-    margin: 0;
     color: #222;
     background: #fff;
     padding: 0;
@@ -166,6 +165,37 @@ table th {
     font-size: .7em;
 }
 
+.project-title a {
+    text-decoration: none;
+    color: #333;
+}
+
+.project-title {
+    margin: .7em 0 0 0;
+}
+
+.project-title a:hover {
+    color: #CF5014;
+}
+
+.project-list .project {
+    margin-top: .7em;
+    border-bottom: 1px dotted #ddd;
+}
+
+.project-list .project:last-child .excerpt {
+    margin-bottom: 50px;
+    border-bottom: none;
+}
+
+.project-info {
+    font-size: .6em;
+}
+
+.project-content .excerpt p {
+    line-height: 25px;
+}
+
 .entry-content h1 a:hover {
     color: #CF5014;
 }
@@ -236,10 +266,25 @@ table th {
     line-height: 1.5em;
 }
 
+#power a {
+    text-decoration: none;
+}
+
+#power a:hover {
+    color: #CF5014;
+}
+
 #footer #power {
     font-size: smaller;
     margin-top: 0.7em;
     float: right;
+    color: #685757;
+}
+
+.project img {
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 50px;
 }
 
 small {
