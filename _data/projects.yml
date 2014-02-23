@@ -5,7 +5,7 @@
   description: A simple HML5 game copy of Bomberman with websocket.
 
 - name: Image Compression
-  image: /images/imageCompression.png
+  image: /images/imagecompression.png
   link: https://gist.github.com/caubry/7103438
   status: Ongoing development
   description: Bash script using pngquant and jpegoptim library to compress PNG JPG and JPEG with batch compression as an option.
