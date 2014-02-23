@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-gb">
+    <head>
+        <title>{{ page.title }}</title>
+    
+        <!-- Meta tags -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="{{ page.description }}">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/favicon.gif">
+
+        <!-- Font -->
+        <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+
+        <!-- Common stylesheet -->
+        <link rel="stylesheet" href="/css/reset.css" type="text/css" />
+        <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    </head>
+
+    <body>
+        <div id="wrap">
+            <header role="banner">
+                <hgroup>
+                    <div id="header-inner">
+                        <div id="social">
+                            <a href="https://github.com/caubry"><img src="/images/github-logo.png"></a>
+                            <a href="http://www.linkedin.com/in/carolineaubry"><img src="/images/linkedin-logo.png"></a>
+                            <a href="https://twitter.com/caubry1"><img src="/images/twitter-logo.png"></a>
+                            <a href="mailto:caroline@carolineaubry.com"><img src="/images/email-logo.png"></a>
+                        </div>
+                        <span id="logo"><a href="/">Caroline Aubry</a></span>
+                        <span><a href="/projects">projects</a></span>
+                    </div>
+                </hgroup>
+            </header>
+
+            <div id="post-content">
+                {{ content }}
+            </div>
+
+            <div id="footer">
+                <span id="power">Powered by <a href="https://github.com/">GitHub</a> & <a href="http://jekyllrb.com/">Jekyll</a></span>
+            </div>
+        </div>
+
+        <!-- Google Analytics -->
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-24280959-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        <!-- Google Analytics end -->
+    </body>
+</html>
