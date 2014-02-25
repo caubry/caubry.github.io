@@ -183,7 +183,7 @@ table th {
     border-bottom: 1px dotted #ddd;
 }
 
-.project-list .project:last-child .excerpt {
+.project-list .project:last-child {
     margin-bottom: 50px;
     border-bottom: none;
 }
