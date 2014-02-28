@@ -15,3 +15,17 @@
   link: /honeytrail
   status: Completed
   description: ActionScript 3 Side scrolling mini-game using right mouse click in order to gather objects and collect points.
+
+- name: Sherwood
+  image: /images/sherwood.png
+  link: /sherwood
+  status: Completed
+  folder: Archived
+  description: ActionScript 2 game created while studying BA(Hons) Games Design. 
+
+- name: Blu Crusader
+  image: /images/blucrusader.png
+  link: /blucrusader
+  status: Completed
+  folder: Archived
+  description: ActionScript 2 game created while studying BA(Hons) Games Design. 

@@ -8,6 +8,9 @@ layout: project
 			<a href="{{ project.link }}"><img src="{{ project.image }}" class="project-image"></a>
 			<div class="project-content">
 				<h2 class="project-title"><a href="{{ project.link }}">{{ project.name }}</a></h2>
+				{% if project.folder == "Archived" %}
+	            	<span class="project-info">{{ project.folder }}, </span>
+				{% endif %}
 	            <span class="project-info">{{ project.status }}</span>
 	            <div class="excerpt"><p>{{ project.description }}</p></div>
 	        </div>
