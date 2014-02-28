@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"blo",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"margin-",
+				"margin-right"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
 				"remo",
 				"removeBomb"
 			],
@@ -84,10 +144,6 @@
 				"loadTiles"
 			],
 			[
-				"ma",
-				"mapLevel"
-			],
-			[
 				"dr",
 				"drawPlayer"
 			],
@@ -98,10 +154,6 @@
 			[
 				"has",
 				"hasTiles"
-			],
-			[
-				"wi",
-				"wishTime"
 			],
 			[
 				"curen",
@@ -384,10 +436,6 @@
 				"dirVec"
 			],
 			[
-				"fo",
-				"for	for (…) {…}"
-			],
-			[
 				"nu",
 				"numXTiles"
 			],
@@ -403,6 +451,57 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "projects/index.html",
+			"settings":
+			{
+				"buffer_size": 534,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/style.css",
+			"settings":
+			{
+				"buffer_size": 4900,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_data/projects.yml",
+			"settings":
+			{
+				"buffer_size": 712,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_site/projects/index.html",
+			"settings":
+			{
+				"buffer_size": 3544,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "---\nlayout: post\ntitle: Udacity - HTML5 Game Development\ndate: 2014-01-15 13:17:14.000000000 +00:00\ntags:\n- JavaScript\n- html5\n---\nHey all & Happy New Year!\n\nA decision has been made... it's time for me to start on a new course related to Game Development.  \nLast year, I took a few online courses on [Coursera](https://www.coursera.org/course/startup/) and I loved them : ]  \nFor those you do not know Coursera yet, it is a website that offers plenty of free courses on diverse topics. It is fun and you have to be really rigorous to pass your certificates : D  \nThe courses that I undertook were:\n\n- [Startup Engineering](https://www.coursera.org/course/startup/) - Stanford University;\n- [Creative Programming for Digital Media & Mobile Apps](https://www.coursera.org/course/digitalmedia/) - University of London International Programmes\n- [Introduction à la Programmation Orientée Objet (en C++)](https://www.coursera.org/course/cpp-fr/) - Ecole Polytechnique Fédérale de Lausanne (but didn’t have any spare time to finish this course.)\n\nAnyway, now it's time to try on a new course... [HTML5 Game Development](https://www.udacity.com/course/cs255/) offered by [Udacity](https://www.udacity.com/).  \nI thought it might be a good idea to keep a track on what I'm actually learning : ]  \nI hope you will enjoy reading about it & try this course out for yourself!\n\n### Contents  \n#### Basics\n[Run-time and parse-time functions](#a0)  \n[Inspecting JSON](#a1)  \n[XMLHttpRequest](#a2)  \n[Loading Sound with XMLHttpRequest](#a3)  \n[Abstracting XMLHttpRequests](#a4)  \n[Interfacing the DOM](#a5)  \n[Prototype](#a6)  \n[Classes](#a7)  \n#### Canvas\n[Canvas](#b0)  \n[Loading Images](#b1)  \n[Drawing Images](#b2)  \n[Animation](#b3)  \n#### Atlases\n[Atlases](#c0)  \n[Parsing texture packer output](#c1)  \n[Rendering texture packer output](#c2)  \n[Parsing Trimmed Textures](#c3)  \n[Tiled](#c4)  \n[Loading Map Data](#c5)  \n[Drawing Tiles](#c6)  \n#### Input\n[Event Listening](#d0)  \n[Keyboard Input Manager](#d1)  \n[Keymapped Input](#d2)  \n[Physics Engine API](#d3)  \n[Mouse/Keyboard Firing](#d4)  \n#### Physics\n[AABB Collision](#e0)  \n[Box2D](#e1)  \n#### Sounds\n[Sounds](#f0)  \n#### Asset Loading\n[Batches](#g0)\n\n### Conclusion\n\nI've learnt HTML5 Game Development - JavaScript basics such as objects, functions, prototype, canvas and the DOM. Other factors that were studied include animation, rendering TexturePacker output, drawing tiles, working with user input, AABB Collision, Box2D, sounds and batch asset loading.\n\n### <a name=a0></a>Run-time and parse-time functions\n\nThis wasn't touched upon in the course, but I think it's important to know the difference between these two ways of declaring a JavaScript function.\n\n    // Error\n    functionOne();\n     \n    var functionOne = function() {\n      //\n    }\n     \n    // No error\n    functionTwo();\n     \n    function functionTwo() {\n      //\n    }\n\nThe distinction between these two functions is that functionOne is defined at run-time, so not accessible before decoration, whereas functionTwo is defined at parse-time and becomes accessible at anytime.\n\n### <a name=a1></a>Inspecting JSON\n\nInspecting JSON using the JavaScript method, parse the JSON file:\n\n    JSON.parse(text, reviver);\n\n- text - String to parse as JSON;\n- reviver - Optional function.\n\nIn this example, the return value is going to be 110.\n\n    JSONExample = {\n        \"frames\": {\n            \"chaingun_impact.png\": {\n                \"frame\": {\n                    \"x\":1162,\n                    \"y\":322,\n                    \"w\":38,\n                    \"h\":34\n                },\n                \"rotated\": false,\n                \"trimmed\": true,\n                \"spriteSourceSize\": {\n                    \"x\":110,\n                    \"y\":111,\n                    \"w\":38,\n                    \"h\":34\n                },\n                \"sourceSize\": {\n                    \"w\":256,\n                    \"h\":256\n                }\n            }\n        }\n    };\n\nParse weaponJSON and assign it to a variable, so you can now access this JSON file as an object.\n\n    parseJSON = function (weaponJSON) {\n      var object = JSON.parse(weaponJSON);\n      console.log(object.frames['chaingun_impact.png'].spriteSourceSize.x);\n    };\n\n### <a name=a2></a>XMLHttpRequest\n\nTo make a request using the JavaScript object&nbsp;XMLHttpRequest, you first need to instantiate the XMLHttpRequest object using the keyword 'new' and initialise this request with its method:\n\n    open(method, URL, async);\n\n- method - GET or POST;\n- URL - To send the request to as a String;\n- async - Optional boolean, defaulting to true, indicating whether or not to perform the operation asynchronously.\n\nThe method to use can be \"GET\", \"POST\", \"PUT\", \"DELETE\", etc. The most common ones are GET and POST. However, GET is simpler and faster than POST, and can be used in most cases.  \nPOST requests can be used when:\n\n- A cached file is not an option (update a file or database on the server);\n- Sending a large amount of data to the server (POST has no size limitations);\n- Sending user input (which can contain unknown characters), POST is more robust and secure than GET.  \n\nTherefore, you need to assign the parseJSON response to the property onload, and finally send this request out.\n\n```\n    parseJSON = function (weaponJSON) {\n        var parsedJSON = JSON.parse(weaponJSON);\n        return parsedJSON['frames']['chaingun_impact.png']['spriteSourceSize']['x'];\n    };\n     \n    var setup = function() {\n        var xmlRequest = new XMLHttpRequest();\n        xmlRequest.open(\"GET\", \"/media/resources/gamedev/weapon.json\", true);\n        \n        xmlRequest.onload  = function () { \n            parseJSON = JSON.parse(this.responseText);\n        };\n        xmlRequest.send();\n    };\n```\n\n### <a name=a3></a>Loading Sound with XMLHttpRequest\n\nLoading a sound involves the same steps as to load a JSON file.  \nFirstly, you need to instantiate the XMLHttpRequest object, initialise this request with its method 'open', assign the parseJSON response to the property onload, and finally send this request out.  \nThe only difference is that when working with audio, the property responseType on the XMLHttpRequest object has to be set to 'arrayBuffer' as a String.\n\n    var setup = function() {\n        var soundRequest = new XMLHttpRequest();\n        soundRequest.open(\"GET\", \"/media/audio/gamedev/bg_menu.ogg\", true);\n        soundRequest.responseType = \"arraybuffer\";\n            \n        soundRequest.onload = function () {\n        try {\n           //\n        }\n        catch(e) {\n           console.warn('Web Audio API is not supported in this browser');\n        }\n       };\n       soundRequest.send();\n    };\n\n### <a name=a4></a>Abstracting XMLHttpRequests\n\nThe function xhrGet takes in the Request uri, a callback function and a type with or without a value.  \nParseJSON function takes the xhr and parse xhr.responseText.  \nYou can then call the xhrGet function by passing a JSON file, a callback function, such as parseJSON and a type with or without a value.  \nNote: If passing a JSON file, the value can be null, whereas when using sounds for instance, the value can be set to 'arraybuffer'.\n\n    function xhrGet(reqUri, callback, type) {\n        var caller = xhrGet.caller;\n        var xhr = new XMLHttpRequest();\n        xhr.open(\"GET\", reqUri, true);\n        if (type) xhr.responseType = type;\n        \n        xhr.onload=function () {\n          if (callback) {\n            try {\n              callback(xhr);\n            }\n            catch(e) {\n              throw 'xhrGet failed:\\n' + reqUri + '\\nException: ' + e + '\\nresponseText: ' + xhr.responseText + '\\ncaller: ' + caller;\n            }\n          }\n        };\n        xhr.send();\n    };\n     \n    parseJSON = function (xhr) {\n        var parsedJSON = JSON.parse(xhr.responseText);\n     \n        var x = parsedJSON['frames']['chaingun_impact.png']['spriteSourceSize']['x'];\n        console.log(x);\n        return x;\n    };\n     \n    xhrGet('weaponJSON', parseJSON, null);\n\n### <a name=a5></a>Interfacing the DOM\n\nFirstly, a body DOM object is created, stored in a variable and its id is set to 'body', by using the document.getElementById method.  \nA new div DOM object is created, using the document.createElement method and set its id property to 'gameContent'.  \nA new canvas DOM object can now be created, as the div DOM object exists, by using once again the document.createElement method. Its id as to be set to 'gameCanvas'.  \nFinally, the canvas DOM object is attached to the div DOM object and the div DOM object to the body, only if no errors have been found while doing so.\n\n    var manipulateDOM = function() {\n      var body=document.getElementById(\"body\");\n      var div=document.createElement(\"div\");\n      \n      if(div){\n          div.id = \"gameContent\";\n          var canvas=document.createElement(\"canvas\");\n          canvas.id = \"gameCanvas\";\n          \n          try {\n            body.appendChild(div);\n            div.appendChild(canvas);    \n          } catch (e){\n            document.write(e);\n          }\n        }\n    };\n    manipulateDOM();\n\n### <a name=a6></a>Prototype\n\nJavaScript provides a way where you can define a set of variables as well as functions encapsulated within an object, called the prototype. When you define a function within JavaScript, it comes with a few pre-defined properties; one of these is the illusive prototype.  \nThe prototype property is initially an empty object, and can have members added to it - as you would with any other object.\n\n    var myObject = function(name){\n      this.name = name;\n      return this;\n    };\n     \n    console.log(typeof myObject.prototype); // object\n     \n    myObject.prototype.getName = function(){\n      return this.name;\n    };\n\n### <a name=a7></a>Classes\n\nJavaScript is a class-free, object-oriented language, and as such, it uses prototypal inheritance instead of classical inheritance.  \nInheritance trees can be built by chaining prototypes to other objects, by using Class.extend method.  \nSo Weapon extends Class, MachineGun extends Weapon and so on and so forth.\n\n    Weapon = Class.extend({\n        init: function() {\n        }\n    });\n     \n    MachineGun = Weapon.extend({\n        init: function() {\n        }\n    });\n     \n    Weapon          = Class.extend({});\n    MachineGun      = Weapon.extend({});\n    Entity          = Class.extend({});\n    ChainGun        = Weapon.extend({});\n    Teleporter      = Entity.extend({});\n    EnergyCanister  = Entity.extend({});\n\n### <a name=b0></a>Canvas\n\nCanvas is a new HTML5 element which exposes APIs allowing you to draw a graph, images and text to portions of the page. Canvas has only two attributes specific to it, width and height.  \nIn order to insert the canvas to the DOM, the canvas has to be attached to the document, using the appendChild method.\n\n    setup = function() {\n      var body = document.getElementById(\"body\");\n      var canvas = document.createElement(\"canvas\");\n      \n      canvas.width = 1200;\n      canvas.height = 720;\n     \n      body.appendChild(canvas);\n    };\n\n### <a name=b1></a>Loading Images\n\nAn image has to be preloaded before it can be drawn in the canvas.  \nTo do so, a new Image() object has to be created. A few steps has to be followed:\n\n- declare a new Image() object;\n- define its onload method;\n- set the Image source attribute.\n\nAs soon as the source property to this image is set to a value, JavaScript will kick off a load function.  \nBecause of this, a callback function has to be specified before setting a source attribute, otherwise the image will load the data and no callback will be received.  \nThe getContext() method returns an object that provides methods and properties for drawing on the canvas.  \nThis reference will cover the properties and methods of the getContext(\"2d\") object, which can be used to draw text, lines, boxes, circles, and more - on the canvas.\n\n    var img = new Image();\n     \n    setup = function() {\n      var body = document.getElementById('body');\n      var canvas = document.createElement('canvas');\n      var ctx = canvas.getContext('2d');\n        \n      canvas.width = window.innerWidth;\n      canvas.height = window.innerHeight;\n     \n      body.appendChild(canvas);\n     \n      img.onload = onImageLoad;\n      img.src    = \"/media/img/gamedev/ralphyrobot.png\";\n        \n      body.appendChild(img);\n    };\n     \n    onImageLoad = function(){\n      console.log(\"Image Loaded\");\n    };\n\n### <a name=b2></a>Drawing Images\n\nThe function drawImage() is used in order to draw images on the canvas. This function takes the Image object itself as well as the location of this image on the canvas.\n\n    var canvas = null;\n    var ctx = null;\n    var img = null;\n     \n    var onImageLoad = function(){\n      console.log(\"Image Loaded\");\n      ctx.drawImage(img, 192, 192);\n      canvas.appendChild(img);\n    };\n     \n    var setup = function() {\n      var body = document.getElementById(\"body\");\n      canvas = document.createElement(\"canvas\");\n     \n      ctx = canvas.getContext('2d');\n      \n      canvas.setAttribute('width', 500);\n      canvas.setAttribute('height', 700);\n      \n      body.appendChild(canvas);\n      img = new Image();\n      img.onload = onImageLoad;\n      img.src = \"/media/img/gamedev/ralphyrobot.png\";\n    };\n\n### <a name=b3></a>Animation\n\nThe canvas doesn't clear itself each frame. The clearRect() method clears the specified pixels within a given rectangle, in order to draw back on the canvas.  \nThe parameters are X, Y, Width and Height as integers;\n\n    var canvas = null;\n    var ctx = null;\n    var frameRate = 1000/30;\n    var frame = 0;\n    var assets = ['/media/img/gamedev/robowalk/robowalk00.png',\n                  '/media/img/gamedev/robowalk/robowalk01.png',\n                  '/media/img/gamedev/robowalk/robowalk02.png',\n                  '/media/img/gamedev/robowalk/robowalk03.png',\n                  '/media/img/gamedev/robowalk/robowalk04.png',\n                  '/media/img/gamedev/robowalk/robowalk05.png',\n                  '/media/img/gamedev/robowalk/robowalk06.png',\n                  '/media/img/gamedev/robowalk/robowalk07.png',\n                  '/media/img/gamedev/robowalk/robowalk08.png',\n                  '/media/img/gamedev/robowalk/robowalk09.png',\n                  '/media/img/gamedev/robowalk/robowalk10.png',\n                  '/media/img/gamedev/robowalk/robowalk11.png',\n                  '/media/img/gamedev/robowalk/robowalk12.png',\n                  '/media/img/gamedev/robowalk/robowalk13.png',\n                  '/media/img/gamedev/robowalk/robowalk14.png',\n                  '/media/img/gamedev/robowalk/robowalk15.png',\n                  '/media/img/gamedev/robowalk/robowalk16.png',\n                  '/media/img/gamedev/robowalk/robowalk17.png',\n                  '/media/img/gamedev/robowalk/robowalk18.png'\n                 ];\n    var frames = [];\n     \n    var onImageLoad = function(){\n        console.log(\"IMAGE!!!\");\n    };\n     \n    var setup = function() {\n        canvas = document.createElement('canvas');\n        ctx = canvas.getContext('2d');\n        \n        canvas.width = window.innerWidth;\n        canvas.height = window.innerHeight;\n     \n        for(i = 0; i < assets.length; ++i)\n        {\n            frames.push(new Image());\n            frames[i].onload = onImageLoad;\n            frames[i].src = assets[i];\n        }\n        setInterval(animate, frameRate); \n    };\n     \n    var animate = function(){\n        ctx.clearRect(0,0,canvas.width, canvas.height);\n        ctx.drawImage(frames[frame], 192, 192);\n        frame = (frame + 1) % frames.length;  \n    };\n     \n    setup();\n\n### <a name=c0></a>Atlases\n\nA texture atlas is a large image containing a collection of images in order to reduce load time and the number of http requests. Whereas spritesheet is a term reserved for animated objects only.  \n[Texture Packer](http://www.codeandweb.com/texturepacker) is a great off the shelf tool to generate the atlas data.\n\n### <a name=c1></a>Parsing texture packer output\n\nIn the code below, I had to iterate through each sprite in the parsed JSON file and calculate the center (x,y) offsets from the 'width' and 'height' values listed in the JSON.  \nAnd finally, pass the sprite name, the (x,y) coordinates, the width and height, and the center (x,y) offsets calculated to the above 'defSprite' method of 'SpriteSheetClass'.\n\n    var gSpriteSheets = {};\n     \n    SpriteSheetClass = Class.extend({\n     \n        img: null,\n     \n        url: \"\",\n     \n        sprites: new Array(),\n     \n        init: function () {},\n     \n        load: function (imgName) {\n            this.url = imgName;\n     \n        var img = new Image();\n        img.src = imgName;\n        this.img = img;\n     \n        gSpriteSheets[imgName] = this;\n        },\n     \n        defSprite: function (name, x, y, w, h, cx, cy) {\n           var spt = {\n            \"id\": name,\n            \"x\": x,\n            \"y\": y,\n            \"w\": w,\n            \"h\": h,\n            \"cx\": cx == null ? 0 : cx,\n            \"cy\": cy == null ? 0 : cy\n        };\n     \n        this.sprites.push(spt);\n        },\n     \n            parseAtlasDefinition: function (atlasJSON) {\n            var parsedJSON = JSON.parse(atlasJSON);\n     \n            for (var key in parsedJSON.frames) {\n               var sprite = parsedJSON.frames[key];\n               var cx = -sprite.frame.w*0.5;\n               var cy = -sprite.frame.h*0.5;\n               this.defSprite(key, sprite.frame.x, sprite.frame.y, sprite.frame.w, sprite.frame.h, cx, cy);\n          }   \n        }\n    });\n\n### <a name=c2></a>Rendering texture packer output\n\n    var gSpriteSheets = {};\n     \n    SpriteSheetClass = Class.extend({\n     \n        img: null,\n     \n        url: \"\",\n     \n        sprites: [],\n     \n        init: function () {},\n     \n        load: function (imgName) {\n        this.url = imgName;\n            var img = new Image();\n            img.src = imgName;\n            this.img = img;\n            gSpriteSheets[imgName] = this;\n        },\n     \n        defSprite: function (name, x, y, w, h, cx, cy) {\n            var spt = {\n                \"id\": name,\n                \"x\": x,\n                \"y\": y,\n                \"w\": w,\n                \"h\": h,\n                \"cx\": cx === null ? 0 : cx,\n                \"cy\": cy === null ? 0 : cy\n            };\n     \n            this.sprites.push(spt);\n        },\n     \n        parseAtlasDefinition: function (atlasJSON) {\n        var parsed = JSON.parse(atlasJSON);\n     \n            for(var key in parsed.frames) {\n                var sprite = parsed.frames[key];\n     \n                var cx = -sprite.frame.w * 0.5;\n                var cy = -sprite.frame.h * 0.5;\n     \n                this.defSprite(key, sprite.frame.x, sprite.frame.y, sprite.frame.w, sprite.frame.h, cx, cy);\n            }\n        },\n     \n        getStats: function (name) {\n            for(var i = 0; i < this.sprites.length; i++) {\n                if(this.sprites[i].id === name) {\n                    return this.sprites[i];\n                }\n     \n            }\n            return null;\n        }\n    });\n     \n    function drawSprite(spritename, posX, posY) {\n        for (var i in gSpriteSheets){\n            var act = gSpriteSheets[i].getStats(spritename);\n            if (act !== null){\n                __drawSpriteInternal(act, gSpriteSheets[i], posX,posY);\n            }\n        }\n    }\n     \n    function __drawSpriteInternal(spt, sheet, posX, posY) {\n     \n        if (sheet === null || spt === null){\n            return;\n        }\n        ctx.drawImage(sheet.img, spt.x, spt.y, spt.w, spt.h, posX + spt.cx, posY + spt.cy, spt.w, spt.h);\n    }\n\n### <a name=c3></a>Parsing Trimmed Textures\n\n    var gSpriteSheets = {};\n     \n    SpriteSheetClass = Class.extend({\n        img: null,\n     \n        url: \"\",\n     \n        sprites: [],\n     \n        init: function () {},\n     \n        load: function (imgName) {\n            this.url = imgName;\n            var img = new Image();\n            img.src = imgName;\n            this.img = img;\n            gSpriteSheets[imgName] = this;\n        },\n     \n        defSprite: function (name, x, y, w, h, cx, cy) {\n            var spt = {\n                \"id\": name,\n                \"x\": x,\n                \"y\": y,\n                \"w\": w,\n                \"h\": h,\n                \"cx\": cx === null ? 0 : cx,\n                \"cy\": cy === null ? 0 : cy\n            };\n            this.sprites.push(spt);\n        },\n     \n        parseAtlasDefinition: function (atlasJSON) {\n          var parsed = JSON.parse(atlasJSON);\n          \n              for(var key in parsed.frames) {\n                  var sprite = parsed.frames[key];\n                var cx = -sprite.frame.w * 0.5;\n                var cy = -sprite.frame.h * 0.5;\n                \n            if (sprite.trimmed) {\n                cx = sprite.spriteSourceSize.x - sprite.sourceSize.w * 0.5;\n                cy = sprite.spriteSourceSize.y - sprite.sourceSize.h * 0.5;\n            }\n                \n                this.defSprite(key, sprite.frame.x, sprite.frame.y, sprite.frame.w, sprite.frame.h, cx, cy);\n            }\n        },\n     \n        getStats: function (name) {\n            for(var i = 0; i < this.sprites.length; i++) {\n            if(this.sprites[i].id === name) {\n              return this.sprites[i];\n            }\n            }\n            return null;\n        }\n     \n    });\n     \n    function drawSprite(spritename, posX, posY) {\n          for(var sheetName in gSpriteSheets) {\n            var sheet = gSpriteSheets[sheetName];\n            var sprite = sheet.getStats(spritename);\n            \n          if(sprite === null) {\n             continue;\n          }\n            __drawSpriteInternal(sprite, sheet, posX, posY);\n            return;\n          }\n    }\n     \n    function __drawSpriteInternal(spt, sheet, posX, posY) {\n        if (spt === null || sheet === null) {\n            return;\n        }\n        \n        var hlf = {\n            x: spt.cx,\n            y: spt.cy\n        };\n     \n        ctx.drawImage(sheet.img, spt.x, spt.y, spt.w, spt.h, posX + hlf.x, posY + hlf.y, spt.w, spt.h);\n    }\n\n### <a name=c4></a>Tiled\n\nTiled is a general purpose tile map editor. It functions as a free tool to allow the easy creation of map layouts.  \nHere is a good site that I've found that covers this topic pretty well: [(Tiled Map Editor)](http://gamedevelopment.tutsplus.com/tutorials/introduction-to-tiled-map-editor--gamedev-2838)\n\n### <a name=c5></a>Loading Map Data\n\n    var TILEDMapClass = Class.extend({\n     \n        fullyLoaded: false,\n     \n        load: function (map) {\n        xhrGet(map, function(data) {\n            this.fullyLoaded = true;\n        });\n        }\n    });\n     \n    var gMap = new TILEDMapClass();\n\n    function xhrGet(reqUri,callback) {\n        var xhr = new XMLHttpRequest();\n     \n        xhr.open(\"GET\", reqUri, true);\n        xhr.onload = callback;\n     \n        xhr.send();\n    }\n\n### <a name=c6></a>Drawing Tiles\n\nParsing tiles output, loading tileset data, tile packet and finally draw tiles on the screen.\n\n    var TILEDMapClass = Class.extend({\n        // This is where we store the full parsed\n        // JSON of the map.json file.\n        currMapData: null,\n     \n        // tilesets stores each individual tileset\n        // from the map.json's 'tilesets' Array.\n        // The structure of each entry of this\n        // Array is explained below in the\n        // parseAtlasDefinition method.\n        tilesets: [],\n     \n        // This is where we store the width and\n        // height of the map in tiles. This is\n        // in the 'width' and 'height' fields\n        // of map.json, respectively.\n        // The values 100 here are just set\n        // so these fields are initialized to\n        // something, rather than null.\n        numXTiles: 100,\n        numYTiles: 100,\n     \n        // The size of each individual map\n        // tile, in pixels. This is in the\n        // 'tilewidth' and 'tileheight' fields\n        // of map.json, respectively.\n        // The values 64 here are just set\n        // so these fields are initialized to\n        // something, rather than null.\n        tileSize: {\n            \"x\": 64,\n            \"y\": 64\n        },\n     \n        // The size of the entire map,\n        // in pixels. This is calculated\n        // based on the 'numXTiles', 'numYTiles',\n        // and 'tileSize' parameters.\n        // The values 64 here are just set\n        // so these fields are initialized to\n        // something, rather than null.\n        pixelSize: {\n            \"x\": 64,\n            \"y\": 64\n        },\n     \n        // Counter to keep track of how many tile\n        // images we have successfully loaded.\n        imgLoadCount: 0,\n     \n        // Boolean flag we set once our tile images\n        // has finished loading.\n        fullyLoaded: false,\n     \n        //-----------------------------------------\n        // Load the json file at the url 'map' into\n        // memory. This is similar to the requests\n        // we've done in the past using\n        // XMLHttpRequests.\n        load: function (map) {\n     \n            // Perform an XMLHttpRequest to grab the\n            // JSON file at url 'map'.\n            xhrGet(map, function (data) {\n                // Once the XMLHttpRequest loads, call the\n                // parseMapJSON method.\n                gMap.parseMapJSON(data.responseText);\n            });\n        },\n     \n        //-----------------------------------------\n        // Parses the map data from 'mapJSON', then\n        // stores that data in a number of members\n        // of our 'TILEDMapClass' that are defined\n        // above.\n        parseMapJSON: function (mapJSON) {\n            // Call JSON.parse on 'mapJSON' and store\n            // the resulting map data\n            gMap.currMapData = JSON.parse(mapJSON);\n     \n            var map = gMap.currMapData;\n          \n            // Set 'numXTiles' and 'numYTiles' from the\n            // 'width' and 'height' fields of our parsed\n            // map data.\n            gMap.numXTiles = map.width;\n            gMap.numYTiles = map.height;\n          \n            // Set the 'tileSize.x' and 'tileSize.y' fields\n            // from the 'tilewidth' and 'tileheight' fields\n            // of our parsed map data.\n            gMap.tileSize.x = map.tilewidth;\n            gMap.tileSize.y = map.tileheight;\n          \n            // Set the 'pixelSize.x' and 'pixelSize.y' fields\n            // by multiplying the number of tiles in our map\n            // by the size of each tile in pixels.\n            gMap.pixelSize.x = gMap.numXTiles * gMap.tileSize.x;\n            gMap.pixelSize.y = gMap.numYTiles * gMap.tileSize.y;\n     \n            // Loop through 'map.tilesets', an Array...\n            for(var i = 0; i < map.tilesets.length; i++) {\n     \n                // ...loading each of the provided tilesets as\n                // Images...\n                var img = new Image();\n                img.onload = function () {\n                    // ...Increment the above 'imgLoadCount'\n                    // field of 'TILEDMap' as each tileset is \n                    // loading...\n                    gMap.imgLoadCount++;\n                    if (gMap.imgLoadCount === map.tilesets.length) {\n                        // ...Once all the tilesets are loaded, \n                        // set the 'fullyLoaded' flag to true...\n                        gMap.fullyLoaded = true;\n                    }\n                };\n     \n                // The 'src' value to load each new Image from is in\n                // the 'image' property of the 'tilesets'.\n                img.src = map.tilesets[i].image;\n     \n                // This is the javascript object we'll create for\n                // the 'tilesets' Array above. First, fill in the\n                // given fields with the corresponding fields from\n                // the 'tilesets' Array in 'currMapData'.\n                var ts = {\n                    \"firstgid\": gMap.currMapData.tilesets[i].firstgid,\n     \n                    // 'image' should equal the Image object we\n                    // just created.\n     \n                    \"image\": img,\n                    \"imageheight\": gMap.currMapData.tilesets[i].imageheight,\n                    \"imagewidth\": gMap.currMapData.tilesets[i].imagewidth,\n                    \"name\": gMap.currMapData.tilesets[i].name,\n     \n                    // These next two fields are tricky. You'll\n                    // need to calculate this data from the\n                    // width and height of the overall image and\n                    // the size of each individual tile.\n                    // \n                    // Remember: This should be an integer, so you\n                    // might need to do a bit of manipulation after\n                    // you calculate it.\n     \n                    \"numXTiles\": Math.floor(gMap.currMapData.tilesets[i].imagewidth / gMap.tileSize.x),\n                    \"numYTiles\": Math.floor(gMap.currMapData.tilesets[i].imageheight / gMap.tileSize.y)\n                };\n     \n                // After that, push the newly created object into\n                // the 'tilesets' Array above. Javascript Arrays\n                // have a handy method called, appropriately, 'push'\n                // that does exactly this. It takes the object\n                // we'd like to put into the Array as a parameter.\n                // \n                // YOUR CODE HERE\n                gMap.tilesets.push(ts);\n            }\n        },\n     \n        //-----------------------------------------\n        // Grabs a tile from our 'layer' data and returns\n        // the 'pkt' object for the layer we want to draw.\n        // It takes as a parameter 'tileIndex', which is\n        // the id of the tile we'd like to draw in our\n        // layer data.\n        getTilePacket: function (tileIndex) {\n     \n            // We define a 'pkt' object that will contain\n            // \n            // 1) The Image object of the given tile.\n            // 2) The (x,y) values that we want to draw\n            //    the tile to in map coordinates.\n            var pkt = {\n                \"img\": null,\n                \"px\": 0,\n                \"py\": 0\n            };\n     \n            // The first thing we need to do is find the\n            // appropriate tileset that we want to draw\n            // from.\n            //\n            // Remember, if the tileset's 'firstgid'\n            // parameter is less than the 'tileIndex'\n            // of the tile we want to draw, then we know\n            // that tile is not in the given tileset and\n            // we can skip to the next one.\n            var tile = 0;\n            for(tile = gMap.tilesets.length - 1; tile >= 0; tile--) {\n                if(gMap.tilesets[tile].firstgid <= tileIndex) break;\n            }\n     \n            // Next, we need to set the 'img' parameter\n            // in our 'pkt' object to the Image object\n            // of the appropriate 'tileset' that we found\n            // above.\n            pkt.img = gMap.tilesets[tile].image;\n     \n     \n            // Finally, we need to calculate the position to\n            // draw to based on:\n            //\n            // 1) The local id of the tile, calculated from the\n            //    'tileIndex' of the tile we want to draw and\n            //    the 'firstgid' of the tileset we found earlier.\n            var localIdx = tileIndex - gMap.tilesets[tile].firstgid;\n     \n            // 2) The (x,y) position of the tile in terms of the\n            //    number of tiles in our tileset. This is based on\n            //    the 'numXTiles' of the given tileset. Note that\n            //    'numYTiles' isn't actually needed here. Think about\n            //    how the tiles are arranged if you don't see this,\n            //    It's a little tricky. You might want to use the \n            //    modulo and division operators here.\n            var lTileX = Math.floor(localIdx % gMap.tilesets[tile].numXTiles);\n            var lTileY = Math.floor(localIdx / gMap.tilesets[tile].numXTiles);\n     \n            // 3) the (x,y) pixel position in our tileset image of the\n            //    tile we want to draw. This is based on the tile\n            //    position we just calculated and the (x,y) size of\n            //    each tile in pixels.\n            pkt.px = (lTileX * gMap.tileSize.x);\n            pkt.py = (lTileY * gMap.tileSize.y);\n     \n     \n            return pkt;\n        },\n     \n        //-----------------------------------------\n        // Draws all of the map data to the passed-in\n        // canvas context, 'ctx'.\n        draw: function (ctx) {\n            // First, we need to check if the map data has\n            // already finished loading...\n            if(!gMap.fullyLoaded) return;\n     \n            // ...Now, for every single layer in the 'layers' Array\n            // of 'currMapData'...\n            for(var layerIdx = 0; layerIdx < gMap.currMapData.layers.length; layerIdx++) {\n                // Check if the 'type' of the layer is \"tilelayer\". If it isn't, we don't\n                // care about drawing it...\n                if(gMap.currMapData.layers[layerIdx].type != \"tilelayer\") continue;\n     \n                // ...Grab the 'data' Array of the given layer...\n                var dat = gMap.currMapData.layers[layerIdx].data;\n     \n                // ...For each tileID in the 'data' Array...\n                for(var tileIDX = 0; tileIDX < dat.length; tileIDX++) {\n                    // ...Check if that tileID is 0. Remember, we don't draw\n                    // draw those, so we can skip processing them...\n                    var tID = dat[tileIDX];\n                    if(tID === 0) continue;\n     \n                    // ...If the tileID is not 0, then we grab the\n                    // packet data using getTilePacket.\n                    var tPKT = gMap.getTilePacket(tID);\n     \n                    // Now we need to calculate the (x,y) position we want to draw\n                    // to in our game world.\n                    //\n                    // We've performed a similar calculation in 'getTilePacket',\n                    // think about how to calculate this based on the tile id and\n                    // various tile properties that our TILEDMapClass has.\n                    //\n                    // YOUR CODE HERE\n                    var dx = Math.floor(tileIDX % gMap.numXTiles) * gMap.tileSize.x;\n                    var dy = Math.floor(tileIDX / gMap.numXTiles) * gMap.tileSize.y;\n     \n                    // Now, we're finally drawing the map to our canvas! The 'drawImage'\n                    // method of our 'ctx' object takes nine arguments:\n                    //\n                    // 1) The Image object to draw,\n                    // 2) The source x coordinate in our Image,\n                    // 3) The source y coordinate in our Image,\n                    // 4) The source width of our tile,\n                    // 5) The source height of our tile,\n                    // 6) The canvas x coordinate to draw to,\n                    // 7) The canvas y coordinate to draw to,\n                    // 8) The destination width,\n                    // 9) The destination height\n                    //\n                    // Note that we don't want to stretch our tiles at all, so the\n                    // source height and width should be the same as the destination!\n                    //\n                    // YOUR CODE HERE\n                    ctx.drawImage(tPKT.img, tPKT.px, tPKT.py, gMap.tileSize.x, gMap.tileSize.y, dx, dy, gMap.tileSize.x, gMap.tileSize.y);\n     \n                }\n            }\n        }\n     \n    });\n     \n    var gMap = new TILEDMapClass();\n\n### <a name=d0></a>Event Listening\n\n    function setup() {\n        var canvas = document.getElementById('my_canvas');\n        canvas.addEventListener('mousemove', onMouseMove);\n        canvas.addEventListener('keydown', onKeyDown);\n    }\n     \n    function onMouseMove(event) {\n        var posX = event.clientX;\n        var posY = event.clientY;\n        return posX;\n    }\n     \n    function onKeyDown(event) {\n        var keyID = event.keyID;\n        return keyID;\n    }\n\n### <a name=d1></a>Keyboard Input Manager\n\n    InputEngineClass = Class.extend({\n     \n            keyState: new Array(256),\n     \n        //-----------------------------\n        setup: function () {\n            document.getElementById('my_canvas').addEventListener('mousemove', this.onMouseMove);\n            document.getElementById('my_canvas').addEventListener('keydown', this.onKeyDown);\n                document.getElementById('my_canvas').addEventListener('keyup', this.onKeyUp);   \n        },\n     \n        //-----------------------------\n        onMouseMove: function (event) {\n            var posx = event.clientX;\n            var posy = event.clientY;\n        },\n     \n        //-----------------------------\n        onKeyDown: function (event) {\n                var keyID = event.keyID;\n                this.keyState[keyID] = true;\n        },\n     \n        //-----------------------------\n        onKeyUp: function (event) {\n            var keyID = event.keyID;\n                this.keyState[keyID] = false;\n        },\n     \n        //-----------------------------\n        update: function() {\n            KeyW = 87;\n     \n            if(this.keyState[KeyW])\n                console.log(\"FORWARD!!!\");\n        }\n    });\n     \n    gInputEngine = new InputEngineClass();\n\n### <a name=d2></a>Keymapped Input\n\n    InputEngineClass = Class.extend({\n     \n        bindings: {},\n     \n        actions: {},\n     \n        mouse: {\n            x: 0,\n            y: 0\n        },\n     \n        //-----------------------------\n        setup: function () {\n            gInputEngine.bind(87, 'move-up');\n            gInputEngine.bind(65, 'move-left');\n            gInputEngine.bind(83, 'move-down');\n            gInputEngine.bind(68, 'move-right');\n     \n            document.getElementById('my_canvas').addEventListener('mousemove', gInputEngine.onMouseMove);\n            document.getElementById('my_canvas').addEventListener('keydown', gInputEngine.onKeyDown);\n            document.getElementById('my_canvas').addEventListener('keyup', gInputEngine.onKeyUp);\n        },\n     \n        //-----------------------------\n        onMouseMove: function (event) {\n            gInputEngine.mouse.x = event.clientX;\n            gInputEngine.mouse.y = event.clientY;\n        },\n     \n        //-----------------------------\n        onKeyDown: function (event) {\n            var action = this.bindings[event.keyID];\n     \n            if (action) {\n                this.actions[action] = true;\n            }\n        },\n     \n        //-----------------------------\n        onKeyUp: function (event) {\n            var action = this.bindings[event.keyID];\n     \n            if (action) {\n                this.actions[action] = false;\n            }\n        },\n     \n        bind: function (key, action) {\n            this.bindings[key] = action;\n        }\n     \n    });\n     \n    gInputEngine = new InputEngineClass();\n\n### <a name=d3></a>Physics Engine API\n\n    GameEngineClass = Class.extend({\n     \n        move_dir: new Vec2(0,0),\n        dirVec: new Vec2(0,0),\n     \n        gPlayer0: {\n            pos: {\n                x: 100,\n                y: 100\n            },\n     \n            walkSpeed: 1,\n     \n            mpPhysBody: new BodyDef()\n        },\n     \n        //-----------------------------\n        setup: function () {\n            gInputEngine.setup();\n        },\n     \n        update: function () {\n            if (gInputEngine.actions['move-up']) {\n                gGameEngine.move_dir.y--;\n                \n            }\n            if (gInputEngine.actions['move-down']) {\n                gGameEngine.move_dir.y++;\n                \n            }\n            if (gInputEngine.actions['move-left']) {\n                gGameEngine.move_dir.x--;\n                \n            }\n            if (gInputEngine.actions['move-right']) {\n                gGameEngine.move_dir.x++;\n                \n            }\n     \n            if (gGameEngine.move_dir.LengthSquared()) {\n                gGameEngine.move_dir.Normalize();\n                gGameEngine.move_dir.Multiply(gGameEngine.gPlayer0.walkSpeed);\n            }\n     \n            gGameEngine.gPlayer0.mpPhysBody.setLinearVelocity(gGameEngine.move_dir.x, gGameEngine.move_dir.y);\n     \n            if (gInputEngine.actions.fire0 || gInputEngine.actions.fire1) {\n            }\n        }\n    });\n     \n    gGameEngine = new GameEngineClass();\n\n### <a name=d4></a>Mouse/Keyboard Firing\n\n    GameEngineClass = Class.extend({\n     \n        move_dir: new Vec2(0,0),\n        dirVec: new Vec2(0,0),\n     \n        gPlayer0: {\n            pos: {\n                x: 100,\n                y: 100\n            },\n     \n            walkSpeed: 1,\n            mpPhysBody: new BodyDef()\n        },\n     \n        //-----------------------------\n        setup: function () {\n            gInputEngine.setup();\n        },\n     \n        update: function () {\n            if (gInputEngine.actions['move-up']) {\n                gGameEngine.move_dir.y -= 1;\n            }\n            if (gInputEngine.actions['move-down']) {\n                gGameEngine.move_dir.y += 1;\n            }\n            if (gInputEngine.actions['move-left']) {\n                gGameEngine.move_dir.x -= 1;\n            }\n            if (gInputEngine.actions['move-right']) {\n                gGameEngine.move_dir.x += 1;\n            }\n     \n            if (gGameEngine.move_dir.LengthSquared()) {\n                gGameEngine.move_dir.Normalize();\n                gGameEngine.move_dir.Multiply(gGameEngine.gPlayer0.walkSpeed);\n            }\n     \n            gGameEngine.gPlayer0.mpPhysBody.setLinearVelocity(gGameEngine.move_dir.x, gGameEngine.move_dir.y);\n     \n            if (gInputEngine.actions.fire0 || gInputEngine.actions.fire1) {\n                var playerInScreenSpace = {\n                    x: gRenderEngine.getScreenPosition(this.gPlayer0.pos).x,\n                    y: gRenderEngine.getScreenPosition(this.gPlayer0.pos).y\n                };\n     \n                dirVec.x = gInputEngine.mouse.x - playerInScreenSpace.x;\n                dirVec.y = gInputEngine.mouse.y - playerInScreenSpace.y;\n     \n                dirVec.normalize();\n            }\n     \n            if (gInputEngine.state('fire-up')) {\n                gGameEngine.dirVec.y--;\n            }\n            else if (gInputEngine.state('fire-down')) {\n                gGameEngine.dirVec.y++;\n            }\n            if (gInputEngine.state('fire-left')) {\n                gGameEngine.dirVec.x--;\n            }\n            else if (gInputEngine.state('fire-right')) {\n                gGameEngine.dirVec.x++;\n            }\n        }\n     \n    });\n     \n    gGameEngine = new GameEngineClass();\n\n### <a name=f0></a>AABB Collision\n\n    intersectRect: function (r1, r2) {\n        return !(r2.left > r1.right ||\n            r2.right < r1.left ||\n            r2.top > r1.bottom ||\n            r2.bottom < r1.top);\n    }\n\n### <a name=f1></a>Box2D\n\n    Vec2 = Box2D.Common.Math.b2Vec2;\n    BodyDef = Box2D.Dynamics.b2BodyDef;\n    Body = Box2D.Dynamics.b2Body;\n    FixtureDef = Box2D.Dynamics.b2FixtureDef;\n    Fixture = Box2D.Dynamics.b2Fixture;\n    World = Box2D.Dynamics.b2World;\n    MassData = Box2D.Collision.Shapes.b2MassData;\n    PolygonShape = Box2D.Collision.Shapes.b2PolygonShape;\n    CircleShape = Box2D.Collision.Shapes.b2CircleShape;\n    DebugDraw = Box2D.Dynamics.b2DebugDraw;\n    RevoluteJointDef = Box2D.Dynamics.Joints.b2RevoluteJointDef;\n     \n    PhysicsEngineClass = Class.extend({\n        world: null,\n     \n        PHYSICS_LOOP_HZ : 1.0 / 60.0,\n     \n        //-----------------------------------------\n        create: function () {\n            gPhysicsEngine.world = new World(\n                new Vec2(0, 0), // Gravity vector\n                false           // Don't allow sleep\n            );\n        },\n     \n        //-----------------------------------------\n        update: function () {\n            var start = Date.now();\n     \n            gPhysicsEngine.world.Step(\n                gPhysicsEngine.PHYSICS_LOOP_HZ,    //frame-rate\n                10,    //velocity iterations\n                10     //position iterations\n            );\n            gPhysicsEngine.world.ClearForces();\n     \n            return(Date.now() - start);\n        },\n     \n        //-----------------------------------------\n        registerBody: function (bodyDef) {\n            var body = gPhysicsEngine.world.CreateBody(bodyDef);\n            return body;\n        },\n     \n        //-----------------------------------------\n        addBody: function (entityDef) {\n            var bodyDef = new BodyDef();\n            \n            var BODY_STATES = {\n                static: Body.b2_staticBody,\n                dynamic: Body.b2_dynamicBody\n            };\n            \n            bodyDef.type = BODY_STATES[entityDef.type];\n        \n            bodyDef.position.x = entityDef.x;\n            bodyDef.position.y = entityDef.y;\n            \n            var body = gPhysicsEngine.registerBody(bodyDef);\n     \n            var fixtureDef = new FixtureDef();\n            \n            if(entityDef.useBouncyFixture) {\n                this.fixtureDef.density = 1.0;\n                this.fixtureDef.friction = 0;\n                this.fixtureDef.restitution = 1.0;\n            }\n     \n            var polygonShape = new PolygonShape();\n            fixtureDef.shape = polygonShape;\n     \n            fixtureDef.shape.SetAsBox(entityDef.halfWidth, entityDef.halfHeight);\n     \n            body.CreateFixture(fixtureDef);\n            \n            return body;\n        }\n        \n        //-----------------------------------------\n        removeBody: function (obj) {\n            gPhysicsEngine.world.DestroyBody(obj);\n        }\n    });\n     \n    var gPhysicsEngine = new PhysicsEngineClass();\n\n### <a name=g0></a>Sounds\n\n[GoldWave](http://www.goldwave.com/) allows to use unify your sounds.\n\n### <a name=h0></a>Batches\n\n    var gCachedAssets = {};\n     \n    function loadAssets(assetList, callbackFcn) {\n        var loadBatch = {\n            count: 0,\n            total: assetList.length,\n            cb: callbackFcn\n        };\n     \n        for(var i = 0; i < assetList.length; i++) {\n            if(gCachedAssets[assetList[i]] == null) {\n                var assetType = getAssetTypeFromExtension(assetList[i]);\n     \n                if(assetType === 0) { // Asset is an image\n                    var img = new Image();\n                    img.onload = function () {\n                        onLoadedCallback(img, loadBatch);\n                    };\n                    img.src = assetList[i];\n                    gCachedAssets[assetList[i]] = img;\n     \n                } else if(assetType === 1) { // Asset is Javascript\n                    var fileref = document.createElement('script');\n                    fileref.setAttribute(\"type\", \"text/javascript\");\n                    fileref.onload = function (e){\n                        onLoadedCallback(fileref,loadBatch);\n                    };\n                    fileref.setAttribute(\"src\", assetList[i]);\n                    document.getElementsByTagName(\"head\")[0].appendChild(fileref);\n                    gCachedAssets[assetList[i]] = fileref;\n                }\n     \n            } else { // Asset is already loaded\n                onLoadedCallback(gCachedAssets[assetList[i]], loadBatch);\n            }\n        }\n    }\n     \n    function onLoadedCallback(asset, batch) {\n        batch.count++;\n        if(batch.count == batch.total) {\n            batch.cb(asset);\n        }\n    }\n     \n    function getAssetTypeFromExtension(fname) {\n        if(fname.indexOf('.jpg') != -1 || fname.indexOf('.jpeg') != -1 || fname.indexOf('.png') != -1 || fname.indexOf('.gif') != -1 || fname.indexOf('.wp') != -1) {\n            // It's an image!\n            return 0;\n        }\n     \n        if(fname.indexOf('.js') != -1 || fname.indexOf('.json') != -1) {\n            // It's javascript!\n            return 1;\n        }\n     \n        // Uh Oh\n        return -1;\n    }",
+			"file": "_posts/2014-01-15-udacity-html5-game-development.markdown",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 48204,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/workspace/octopress/sass/custom/_fonts.scss",
+			"settings":
+			{
+				"buffer_size": 529,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -411,16 +510,16 @@
 		"selected_items":
 		[
 			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
 				"insta",
 				"Package Control: Install Package"
 			],
 			[
 				"save",
 				"Project: Save As"
-			],
-			[
-				"add",
-				"Project: Add Folder"
 			],
 			[
 				"in",
@@ -451,7 +550,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 496.0
+		"width": 544.0
 	},
 	"console":
 	{
@@ -472,12 +571,28 @@
 	},
 	"file_history":
 	[
-		"/C/workspace/octopress/source/index.html",
-		"/C/workspace/octopress/source/_layouts/project.html",
+		"/C/workspace/caubry.github.io/CNAME",
 		"/C/workspace/octopress/source/projects/index.html",
+		"/C/workspace/caubry.github.io/index.html",
+		"/C/workspace/caubry.github.io/_layouts/default.html",
+		"/C/workspace/caubry.github.io/_layouts/project.html",
+		"/C/workspace/octopress/_config.yml",
+		"/C/workspace/caubry.github.io/_posts/2014-02-14-javascript-animation-using-requestanimationframe-and-set-a-fps.markdown",
+		"/C/workspace/jamesmcfadden.github.io/index.html",
+		"/C/workspace/caubry.github.io/_layouts/post.html",
+		"/C/workspace/caubry.github.io/README.md",
+		"/C/workspace/caubry.github.io/_site/git-hooks-for-jshint-node-module-with-grunt/index.html",
+		"/C/workspace/jamesmcfadden.github.io/_layouts/default.html",
+		"/C/workspace/octopress/source/index.html",
+		"/C/workspace/caubry.github.io/_site/flashdevelop-for-as3/index.html",
+		"/C/workspace/octopress/sass/base/_typography.scss",
+		"/C/workspace/octopress/sass/custom/_fonts.scss",
+		"/C/workspace/jamesmcfadden.github.io/_posts/2012-07-29-installing-ruby-on-rails-on-centos-5-8.md",
+		"/C/workspace/caubry.github.io/_posts/2012-10-03-flashdevelop-for-as3.markdown",
+		"/C/workspace/caubry.github.io/downloads/netbeans-obsidian-theme.zip",
+		"/C/workspace/octopress/source/_layouts/project.html",
 		"/C/workspace/octopress/sass/custom/_styles.scss",
 		"/C/workspace/caubry.github.io/_config.yml",
-		"/C/workspace/caubry.github.io/index.html",
 		"/C/workspace/octopress/source/projects/bomberman/index.md",
 		"/C/workspace/octopress/source/projects/bomberman.markdown",
 		"/C/workspace/octopress/sass/partials/_blog.scss",
@@ -485,7 +600,6 @@
 		"/C/workspace/octopress/source/projects/index.markdown",
 		"/C/workspace/octopress/source/_posts/2013-02-01-setting-up-an-as2-project-using-mtasc.markdown",
 		"/C/workspace/octopress/source/_includes/navigation.html",
-		"/C/workspace/octopress/_config.yml",
 		"/C/workspace/octopress/source/_data/_projects.yml",
 		"/C/workspace/octopress/sass/screen.scss",
 		"/C/workspace/octopress/sass/base/_theme.scss",
@@ -516,11 +630,9 @@
 		"/C/workspace/octopress/.themes/minimized/sass/screen.scss",
 		"/C/workspace/octopress/sass/plugins/_plugins.scss",
 		"/C/workspace/octopress/sass/partials/_archive.scss",
-		"/C/workspace/octopress/sass/custom/_fonts.scss",
 		"/C/workspace/octopress/sass/custom/_colors.scss",
 		"/C/workspace/octopress/sass/_base.scss",
 		"/C/workspace/octopress/sass/base/_solarized.scss",
-		"/C/workspace/octopress/sass/base/_typography.scss",
 		"/C/workspace/octopress/source/blog/archives/index.html",
 		"/C/workspace/octopress/source/about/index.markdown",
 		"/C/workspace/octopress/.themes/minimized/sass/partials/_navigation.scss",
@@ -570,13 +682,9 @@
 		"/C/workspace/caubry.github.io/public/index.html",
 		"/C/workspace/caubry.github.io/Gemfile",
 		"/C/Users/Caroline/.ssh/config",
-		"/C/workspace/caubry.github.io/_posts/2012-10-03-flashdevelop-for-as3.markdown",
 		"/C/workspace/caubry.github.io/_posts/2012-10-03-about.markdown",
-		"/C/workspace/caubry.github.io/_posts/2014-02-14-javascript-animation-using-requestanimationframe-and-set-a-fps.markdown",
 		"/C/workspace/caubry.github.io/css/style.css",
-		"/C/workspace/caubry.github.io/CNAME",
 		"/C/workspace/caubry.github.io/_site/about/index.html",
-		"/C/workspace/caubry.github.io/_layouts/default.html",
 		"/C/Users/Caroline/caubry.github.io/_posts/2014-02-14-javascript-animation-using-requestanimationframe-and-set-a-fps.markdown",
 		"/C/workspace/caubry.github.io/_posts/2012-10-03-59.markdown",
 		"/C/Users/Caroline/caubry.github.io/index.html",
@@ -590,16 +698,7 @@
 		"/C/workspace/bomberman/js/setup/config.js",
 		"/C/workspace/bomberman/data/map/map-level2.json",
 		"/C/workspace/bomberman/js/events/mediatorEvent.js",
-		"/C/workspace/bomberman/js/characters/playerManager.js",
-		"/C/workspace/html5-bomberman/web/game/js/Map.js",
-		"/C/workspace/html5-bomberman/web/game/css/game.css",
-		"/C/workspace/html5-bomberman/web/game/js/Game.js",
-		"/C/workspace/html5-bomberman/web/game/js/lib/text.js",
-		"/C/workspace/html5-bomberman/web/game/js/lib/underscore.js",
-		"/C/workspace/html5-bomberman/web/game/js/lib/backbone.js",
-		"/C/workspace/html5-bomberman/web/game/js/polyfills/jscript.js",
-		"/C/workspace/html5-bomberman/web/game/js/polyfills/excanvas.js",
-		"/C/workspace/html5-bomberman/web/game/sass/game.scss"
+		"/C/workspace/bomberman/js/characters/playerManager.js"
 	],
 	"find":
 	{
@@ -618,6 +717,39 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"last-child",
+			"last",
+			"last-child",
+			"project-list",
+			".cf",
+			"project",
+			"project ",
+			"project",
+			"project-content",
+			"project",
+			"project-list",
+			"margin",
+			"project ",
+			"project-content",
+			"project-info",
+			"project-list",
+			"project-content",
+			"date",
+			"excerpt",
+			"span",
+			"cf",
+			"entry-list",
+			"entry",
+			"decoration",
+			"entry-cont",
+			"entry-date",
+			"h1",
+			"wrap",
+			" }}</",
+			"entry-dat",
+			"entry-date",
+			"content",
+			"hover",
 			"exerpt",
 			"clearfix",
 			"article",
@@ -712,40 +844,7 @@
 			"[Texture Packer](http://www.codeandweb.com/texturepacker);",
 			"game.map",
 			"])\n",
-			"';\n",
-			"d",
-			"utils",
-			"])\n",
-			"layer",
-			"game.map.loadTiles.DESPICABLE_COLLISION",
-			"game.map.loadTiles.POWER_UPS",
-			"game.map.loadTiles.DESPICABLE_BLOCK",
-			"game.map.loadTiles.STATIC_BLOCK",
-			"STATIC_BLOCK",
-			"game.loadTiles",
-			"registeredEvent",
-			"  \n",
-			"tileset",
-			"mapLayers",
-			"tileset",
-			"data",
-			"powerups",
-			"player",
-			"layers",
-			"drawToMap",
-			"draw",
-			")\n",
-			"\n    ",
-			"')\n",
-			")\n",
-			">\n",
-			"game.ctx",
-			"game.",
-			"game.canvas",
-			"map",
-			"])\n",
-			"draw",
-			"sprites"
+			"';\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -779,8 +878,191 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "projects/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								234,
+								249
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2434,
+								2441
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2101.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"file": "favicon.gif",
+					"semi_transient": true,
+					"stack_index": 4,
+					"type": "image"
+				},
+				{
+					"buffer": 2,
+					"file": "_data/projects.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								246,
+								246
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_site/projects/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2207,
+								2214
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 354.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "_posts/2014-01-15-udacity-html5-game-development.markdown",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 48204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2000,
+								2000
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 902.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/workspace/octopress/sass/custom/_fonts.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								453,
+								474
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -826,7 +1108,7 @@
 	"project": "caubry.github.io.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 38.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -864,7 +1146,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 99.0,
+	"side_bar_width": 134.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
