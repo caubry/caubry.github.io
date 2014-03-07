@@ -55,7 +55,7 @@
 <pre><code>    module.exports = function(grunt) {
         grunt.initConfig({
             jshint: {
-              files: ['js/*'],
+              files: [&#39;js/*&#39;],
               options: {
                 // options here to override JSHint defaults
                 globals: {
@@ -68,17 +68,17 @@
             },
             githooks: {
               all: {
-                'pre-commit': 'jshint'
+                &#39;pre-commit&#39;: &#39;jshint&#39;
               }
             }
         });
 
         // Load tasks
-        grunt.loadNpmTasks('grunt-contrib-jshint');
-        grunt.loadNpmTasks('grunt-githooks');
+        grunt.loadNpmTasks(&#39;grunt-contrib-jshint&#39;);
+        grunt.loadNpmTasks(&#39;grunt-githooks&#39;);
 
         // Register tasks
-        grunt.registerTask('default', ['githooks', 'jshint']);
+        grunt.registerTask(&#39;default&#39;, [&#39;githooks&#39;, &#39;jshint&#39;]);
     }</code></pre>
 
 <p>Run Grunt Git Hooks as a test:</p>
@@ -126,18 +126,5 @@
             ga('send', 'pageview');
         </script>
         <!-- Google Analytics end -->
-            <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'caubry'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-    
     </body>
 </html>
