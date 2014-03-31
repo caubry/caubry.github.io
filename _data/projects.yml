@@ -1,3 +1,9 @@
+- name: SublimeFlash
+  image: /images/sublimeflash.png
+  link: https://github.com/caubry/SublimeFlash
+  status: In development
+  description: A customisable template-based script for creating Actionscript 3 projects ready for compilation by SublimeText.
+
 - name: Bomberman
   image: /images/bomberman.png
   link: https://github.com/caubry/bomberman
