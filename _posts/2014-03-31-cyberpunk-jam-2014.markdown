@@ -10,7 +10,7 @@ date: 2014-03-31 12:56:00.000000000 +00:00
 
 [Fused](http://zhan.itch.io/fused) is the game that I ended up making with Zhan Gurskis for the Game Jam, from March 1st to March 10th.  
 Although it was tedious and exhausting, as I am a full time employee, it was a great experience.  
-Being my first time tryin a Game Jam, I will definitely enter the competition again, especially as we were really pleased to be [ranked](http://itch.io/jam/cyberpunk-jam/results?page=5) 42 out of 268 games.  
+Being my first time tryin a Game Jam, I will definitely enter the competition again, especially as we were really pleased to be [ranked](http://itch.io/jam/cyberpunk-jam/rate/4197) 42 out of 268 games.  
 
 While the complete ActionScript 3 version of the game is still under development, you can play the game made purely within the Flash IDE at: [http://zhan.itch.io/fused.](http://zhan.itch.io/fused)    
 We had to hand in the IDE version due to a lack of time and probably a lack of experience on my part; especially with making games in such a strict deadline. In order to avoid the same experience happening next time, I am making sure that the AS3 version of the game is going to be good enough to be used as a reference for future short games.  
