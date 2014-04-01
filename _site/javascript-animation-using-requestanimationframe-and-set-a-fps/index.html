@@ -24,10 +24,10 @@
                 <hgroup>
                     <div id="header-inner">
                         <div id="social">
-                            <a href="https://github.com/caubry"><img src="/images/github-logo.png"></a>
-                            <a href="http://www.linkedin.com/in/carolineaubry"><img src="/images/linkedin-logo.png"></a>
-                            <a href="https://twitter.com/caubry1"><img src="/images/twitter-logo.png"></a>
-                            <a href="mailto:caroline@carolineaubry.com"><img src="/images/email-logo.png"></a>
+                            <a class="github social" href="https://github.com/caubry"></a>
+                            <a class="linkedin social" href="http://www.linkedin.com/in/carolineaubry"></a>
+                            <a class="twitter social" href="https://twitter.com/caubry1"></a>
+                            <a class="email social" href="mailto:caroline@carolineaubry.com"></a>
                         </div>
                         <span id="logo"><a href="/">Caroline Aubry</a></span>
                         <span><a href="/projects">projects</a></span>
@@ -53,11 +53,11 @@
      
     (function() {
         var lastTime = 0;
-        var vendors = [&#39;ms&#39;, &#39;moz&#39;, &#39;webkit&#39;, &#39;o&#39;];
+        var vendors = ['ms', 'moz', 'webkit', 'o'];
         for(var x = 0; x &lt; vendors.length &amp;&amp; !window.requestAnimationFrame; ++x) {
-            window.requestAnimationFrame = window[vendors[x]+&#39;RequestAnimationFrame&#39;];
-            window.cancelAnimationFrame = window[vendors[x]+&#39;CancelAnimationFrame&#39;] 
-                                       || window[vendors[x]+&#39;CancelRequestAnimationFrame&#39;];
+            window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+            window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+                                       || window[vendors[x]+'CancelRequestAnimationFrame'];
         }
      
         if (!window.requestAnimationFrame)

@@ -24,6 +24,44 @@ header[role="banner"] #social a {
     margin-right: 5px;
 }
 
+header[role="banner"] #social a.social {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+}
+
+header[role="banner"] .github {
+    background-image: url('/images/github-logo.png');
+}
+
+header[role="banner"] .github:hover {
+    background-image: url('/images/github-logo-orange.png');
+}
+
+header[role="banner"] .linkedin {
+    background-image: url('/images/linkedin-logo.png');
+}
+
+header[role="banner"] .linkedin:hover {
+    background-image: url('/images/linkedin-logo-orange.png');
+}
+
+header[role="banner"] .twitter {
+    background-image: url('/images/twitter-logo.png');
+}
+
+header[role="banner"] .twitter:hover {
+    background-image: url('/images/twitter-logo-orange.png');
+}
+
+header[role="banner"] .email {
+    background-image: url('/images/email-logo.png');
+}
+
+header[role="banner"] .email:hover {
+    background-image: url('/images/email-logo-orange.png');
+}
+
 #header-inner span#logo a {
     color: #333;
     margin-right: 27px;
