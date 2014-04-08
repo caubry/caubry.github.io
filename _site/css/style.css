@@ -25,41 +25,42 @@ header[role="banner"] #social a {
 }
 
 header[role="banner"] #social a.social {
+    background-image: url('/images/logos.png');
     display: inline-block;
     height: 32px;
     width: 32px;
 }
 
 header[role="banner"] .github {
-    background-image: url('/images/github-logo.png');
+    background-position: 32px 0px;
 }
 
 header[role="banner"] .github:hover {
-    background-image: url('/images/github-logo-orange.png');
+    background-position: 32px 32px;
 }
 
 header[role="banner"] .linkedin {
-    background-image: url('/images/linkedin-logo.png');
+    background-position: 64px 0px;
 }
 
 header[role="banner"] .linkedin:hover {
-    background-image: url('/images/linkedin-logo-orange.png');
+    background-position: 64px 32px;
 }
 
 header[role="banner"] .twitter {
-    background-image: url('/images/twitter-logo.png');
+    background-position: 96px 0px;
 }
 
 header[role="banner"] .twitter:hover {
-    background-image: url('/images/twitter-logo-orange.png');
+    background-position: 96px 32px;
 }
 
 header[role="banner"] .email {
-    background-image: url('/images/email-logo.png');
+    background-position: 0px 0px;
 }
 
 header[role="banner"] .email:hover {
-    background-image: url('/images/email-logo-orange.png');
+    background-position: 0px 32px;
 }
 
 #header-inner span#logo a {

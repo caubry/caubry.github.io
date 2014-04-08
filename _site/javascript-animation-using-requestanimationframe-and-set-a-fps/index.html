@@ -53,11 +53,11 @@
      
     (function() {
         var lastTime = 0;
-        var vendors = ['ms', 'moz', 'webkit', 'o'];
+        var vendors = [&#39;ms&#39;, &#39;moz&#39;, &#39;webkit&#39;, &#39;o&#39;];
         for(var x = 0; x &lt; vendors.length &amp;&amp; !window.requestAnimationFrame; ++x) {
-            window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-            window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
-                                       || window[vendors[x]+'CancelRequestAnimationFrame'];
+            window.requestAnimationFrame = window[vendors[x]+&#39;RequestAnimationFrame&#39;];
+            window.cancelAnimationFrame = window[vendors[x]+&#39;CancelAnimationFrame&#39;] 
+                                       || window[vendors[x]+&#39;CancelRequestAnimationFrame&#39;];
         }
      
         if (!window.requestAnimationFrame)
