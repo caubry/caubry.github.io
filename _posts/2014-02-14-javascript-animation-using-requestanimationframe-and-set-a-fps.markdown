@@ -15,7 +15,7 @@ Modern browsers such as Mozilla, Chrome and Safari offer an alternative to the m
 Unfortunately, as it's an API, it's only currently available in browsers via a vendor prefix.  
 Luckily, Eric M&ouml;ller, Paul Irish and Tino Zijdel have created a [polyfill](http://remysharp.com/2010/10/08/what-is-a-polyfill/) to get around this issue:  
 [(Gist)](https://gist.github.com/paulirish/1579671)
-```
+
     // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
     // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating 
     // requestAnimationFrame polyfill by Erik M&ouml;ller. fixes from Paul Irish and Tino Zijdel
@@ -45,11 +45,9 @@ Luckily, Eric M&ouml;ller, Paul Irish and Tino Zijdel have created a [polyfill](
                 clearTimeout(id);
             };
     }());
-```
 
 You can just use this polyfill like so:
 
-```
     requestId: 0,
     move: function() {
       var _this = this;
@@ -74,12 +72,10 @@ You can just use this polyfill like so:
       // Allow a new request to be called
       this.requestId = 0;
     }
-```
 
 That works fine!  
 Unfortunately, this doesn't take into account the FPS (frame per seconds) of your game. A work around is to use the method __setTimeout__ in conjunction with the polyfill, such as:
 
-```
     requestId: 0,
     settimeoutID: 0,
      
@@ -112,6 +108,5 @@ Unfortunately, this doesn't take into account the FPS (frame per seconds) of you
       // Allow a new request to be called
       this.requestId = 0;
     }
-```
 
 Of course, using this method allows anyone to easily change the FPS and most importantly, controls the timing of an animation across multiple browsers. 

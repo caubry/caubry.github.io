@@ -56,35 +56,34 @@ Create a package.json to be executed when running:
 <p>Create/update the Gruntfile.js file<br />
 Example:</p>
 
-<p>```
-    module.exports = function(grunt) {
-        grunt.initConfig({
-            jshint: {
-              files: [‘js/*’],
-              options: {
-                // options here to override JSHint defaults
-                globals: {
-                  jQuery: true,
-                  console: true,
-                  module: true,
-                  document: true
-                }
-              }
-            },
-            githooks: {
-              all: {
-                ‘pre-commit’: ‘jshint’
-              }
+<pre><code>module.exports = function(grunt) {
+    grunt.initConfig({
+        jshint: {
+          files: ['js/*'],
+          options: {
+            // options here to override JSHint defaults
+            globals: {
+              jQuery: true,
+              console: true,
+              module: true,
+              document: true
             }
-        });</p>
+          }
+        },
+        githooks: {
+          all: {
+            'pre-commit': 'jshint'
+          }
+        }
+    });
 
-<pre><code>    // Load tasks
+    // Load tasks
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-githooks');
 
     // Register tasks
     grunt.registerTask('default', ['githooks', 'jshint']);
-} ```
+}
 </code></pre>
 
 <p>Run Grunt Git Hooks as a test:</p>

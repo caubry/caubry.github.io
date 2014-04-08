@@ -52,10 +52,9 @@
 This is important to include it, as MTASC will make use of it as a single point of entry.<br />
 See “- main” MTASC option in <a href="#a0">run.sh</a>.</p>
 
-<p>```
-    import MouseTrail.Interface;</p>
-
-<pre><code>class MouseTrail.Main 
+<pre><code>import MouseTrail.Interface;
+ 
+class MouseTrail.Main 
 {
     private static var m:Main;
     var int:Interface;
@@ -69,24 +68,24 @@ See “- main” MTASC option in <a href="#a0">run.sh</a>.</p>
     {
         m = new Main(root);
     }
-} ```
+}
 </code></pre>
 
 <h4 id="interfaceas">Interface.as</h4>
 
 <p>You can now use any Classes you want from your library, because of the “-cp” MTASC option.</p>
 
-<p>```
-class MouseTrail.Interface
+<pre><code>class MouseTrail.Interface
 {
-    private var pen:MovieClip;</p>
-
-<pre><code>public function Interface (root:MovieClip)
-{
-    var c:MovieClip= root.createEmptyMovieClip("test", root.getNextHighestDepth());
-    
-    // Do something
-} } ```
+    private var pen:MovieClip;
+ 
+    public function Interface (root:MovieClip)
+    {
+        var c:MovieClip= root.createEmptyMovieClip("test", root.getNextHighestDepth());
+        
+        // Do something
+    }
+}
 </code></pre>
 
 <p><a name="a0">run.sh</a></p>
@@ -97,18 +96,19 @@ class MouseTrail.Interface
   <li>“-swf” refers to your input.</li>
   <li>“-main” refers to your static method (see above).</li>
   <li>“-out” refers to your output.</li>
-  <li>“-cp” refers to your classes root folder.</li>
+  <li>“-cp” refers to your classes root folder.  </li>
 </ul>
 
-<p><code>
-# !/bin/bash
+<p>Example:</p>
+
+<pre><code># !/bin/bash
 ROOT= ~/Desktop/TODO
-mtasc $ROOT/mousetrail/src/MouseTrail/Main.as -main 
--swf $ROOT/mousetrail/bin/mouseTrail.swf 
--out $ROOT/mousetrail/bin/Interface.swf 
+mtasc $ROOT/mousetrail/src/MouseTrail/Main.as -main
+-swf $ROOT/mousetrail/bin/mouseTrail.swf
+-out $ROOT/mousetrail/bin/Interface.swf
 -cp $ROOT/mousetrail/src
 open $ROOT/mousetrail/bin/Interface.swf
-</code></p>
+</code></pre>
 
     <div id="disqus_thread"></div>
     <script type="text/javascript">

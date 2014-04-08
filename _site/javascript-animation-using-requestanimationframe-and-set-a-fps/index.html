@@ -50,14 +50,14 @@ Clearly not good for the lifetime of any device…<br />
 Modern browsers such as Mozilla, Chrome and Safari offer an alternative to the methods above, with a <strong>requestAnimationFrame</strong> function. It provides a native API for running any type of animation in the browser.<br />
 Unfortunately, as it’s an API, it’s only currently available in browsers via a vendor prefix.<br />
 Luckily, Eric Möller, Paul Irish and Tino Zijdel have created a <a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">polyfill</a> to get around this issue:<br />
-<a href="https://gist.github.com/paulirish/1579671">(Gist)</a>
-```
-    // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-    // http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating 
-    // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
-    // MIT license</p>
+<a href="https://gist.github.com/paulirish/1579671">(Gist)</a></p>
 
-<pre><code>(function() {
+<pre><code>// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating 
+// requestAnimationFrame polyfill by Erik M&amp;ouml;ller. fixes from Paul Irish and Tino Zijdel
+// MIT license
+ 
+(function() {
     var lastTime = 0;
     var vendors = ['ms', 'moz', 'webkit', 'o'];
     for(var x = 0; x &lt; vendors.length &amp;&amp; !window.requestAnimationFrame; ++x) {
@@ -80,17 +80,16 @@ Luckily, Eric Möller, Paul Irish and Tino Zijdel have created a <a href="http:/
         window.cancelAnimationFrame = function(id) {
             clearTimeout(id);
         };
-}()); ```
+}());
 </code></pre>
 
 <p>You can just use this polyfill like so:</p>
 
-<p>```
-    requestId: 0,
-    move: function() {
-      var _this = this;</p>
-
-<pre><code>  if (this.requestId === 0) {
+<pre><code>requestId: 0,
+move: function() {
+  var _this = this;
+ 
+  if (this.requestId === 0) {
     (function animationLoop() {
       _this.render();
       _this.requestId = requestAnimationFrame(animationLoop, _this.move);
@@ -109,17 +108,16 @@ onKeyUp: function() {
   }
   // Allow a new request to be called
   this.requestId = 0;
-} ```
+}
 </code></pre>
 
 <p>That works fine!<br />
 Unfortunately, this doesn’t take into account the FPS (frame per seconds) of your game. A work around is to use the method <strong>setTimeout</strong> in conjunction with the polyfill, such as:</p>
 
-<p>```
-    requestId: 0,
-    settimeoutID: 0,</p>
-
-<pre><code>move: function(keyCode) {
+<pre><code>requestId: 0,
+settimeoutID: 0,
+ 
+move: function(keyCode) {
   var _this = this;
   // Frame per seconds
   var fps = 15;
@@ -147,7 +145,7 @@ onKeyUp: function() {
   }
   // Allow a new request to be called
   this.requestId = 0;
-} ```
+}
 </code></pre>
 
 <p>Of course, using this method allows anyone to easily change the FPS and most importantly, controls the timing of an animation across multiple browsers. </p>

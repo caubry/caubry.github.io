@@ -35,27 +35,23 @@ If I wish to see what is inside this file, I can simply run this command from my
 
 Now, I'm getting something like:
 
-```
-Objects in file panda.swf:
-  [-i] 36 Shapes: ID(s) 28, 30, 33, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 87, 91, 119, 120, 123, 129, 130, 143
-  [-i] 9 MovieClips: ID(s) 31, 34, 35, 135, 136, 144, 147, 175, 191
-  [-j] 2 JPEGs: ID(s) 27, 86
-  [-p] 2 PNGs: ID(s) 29, 32
-  [-s] 26 Sounds: ID(s) 2-26, 92
-  [-F] 4 Fonts: ID(s) 88, 126, 149, 181
-  [-M] 8 Embedded MP3s: ID(s) 31, 34, 35, 136, 144, 147, 175, 191
-  [-f] 1 Frame: ID(s) 0
-  [-m] 1 MP3 Soundstream
-```
+    Objects in file panda.swf:
+      [-i] 36 Shapes: ID(s) 28, 30, 33, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 87, 91, 119, 120, 123, 129, 130, 143
+      [-i] 9 MovieClips: ID(s) 31, 34, 35, 135, 136, 144, 147, 175, 191
+      [-j] 2 JPEGs: ID(s) 27, 86
+      [-p] 2 PNGs: ID(s) 29, 32
+      [-s] 26 Sounds: ID(s) 2-26, 92
+      [-F] 4 Fonts: ID(s) 88, 126, 149, 181
+      [-M] 8 Embedded MP3s: ID(s) 31, 34, 35, 136, 144, 147, 175, 191
+      [-f] 1 Frame: ID(s) 0
+      [-m] 1 MP3 Soundstream
 
 You might also get something with Binarys, like:
 
-```
-Objects in file panda.swf:
-  [-i] 1 Shape: ID(s) 1
-  [-b] 2 Binarys: ID(s) 2, 3
-  [-f] 1 Frame: ID(s) 0
-```
+    Objects in file panda.swf:
+      [-i] 1 Shape: ID(s) 1
+      [-b] 2 Binarys: ID(s) 2, 3
+      [-f] 1 Frame: ID(s) 0
 
 Note that Binarys can hold a second SWF file =o  
 To output a binary into a custon file name, such as myBinaryFile, simply run:
@@ -80,10 +76,8 @@ In this example, taken from panda.swf, I want to extract the sounds from 2 to 26
 
 Sounds will be placed into a folder named 'sounds', in the current directory:
 
-```
-# !/bin/bash
-for NUM in {2..26} 92
-do
-    swfextract -s $NUM panda.swf -o "sounds/sound_$NUM.mp3"
-done
-```
+    # !/bin/bash
+    for NUM in {2..26} 92
+    do
+        swfextract -s $NUM panda.swf -o "sounds/sound_$NUM.mp3"
+    done

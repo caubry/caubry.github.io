@@ -13,7 +13,6 @@ The static method 'main' in Main.as will be used to run MTASC.
 This is important to include it, as MTASC will make use of it as a single point of entry.  
 See "- main" MTASC option in [run.sh](#a0).
 
-```
     import MouseTrail.Interface;
      
     class MouseTrail.Main 
@@ -31,25 +30,22 @@ See "- main" MTASC option in [run.sh](#a0).
             m = new Main(root);
         }
     }
-```
 
 ####Interface.as####
 
 You can now use any Classes you want from your library, because of the "-cp" MTASC option.
 
-```
-class MouseTrail.Interface
-{
-    private var pen:MovieClip;
- 
-    public function Interface (root:MovieClip)
+    class MouseTrail.Interface
     {
-        var c:MovieClip= root.createEmptyMovieClip("test", root.getNextHighestDepth());
-        
-        // Do something
+        private var pen:MovieClip;
+     
+        public function Interface (root:MovieClip)
+        {
+            var c:MovieClip= root.createEmptyMovieClip("test", root.getNextHighestDepth());
+            
+            // Do something
+        }
     }
-}
-```
 
 <a name="a0">run.sh</a>
 
@@ -59,14 +55,14 @@ This script contains the MTASC command line, with four options:
 - "-swf" refers to your input.
 - "-main" refers to your static method (see above).
 - "-out" refers to your output.
-- "-cp" refers to your classes root folder.
+- "-cp" refers to your classes root folder.  
 
-```
-# !/bin/bash
-ROOT= ~/Desktop/TODO
-mtasc $ROOT/mousetrail/src/MouseTrail/Main.as -main 
--swf $ROOT/mousetrail/bin/mouseTrail.swf 
--out $ROOT/mousetrail/bin/Interface.swf 
--cp $ROOT/mousetrail/src
-open $ROOT/mousetrail/bin/Interface.swf
-```
+Example:
+
+    # !/bin/bash
+    ROOT= ~/Desktop/TODO
+    mtasc $ROOT/mousetrail/src/MouseTrail/Main.as -main
+    -swf $ROOT/mousetrail/bin/mouseTrail.swf
+    -out $ROOT/mousetrail/bin/Interface.swf
+    -cp $ROOT/mousetrail/src
+    open $ROOT/mousetrail/bin/Interface.swf

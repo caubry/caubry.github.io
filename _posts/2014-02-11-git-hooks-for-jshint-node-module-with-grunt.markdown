@@ -22,7 +22,6 @@ Or simply install grunt-githooks in the project:
 Create/update the Gruntfile.js file  
 Example:
 
-```
     module.exports = function(grunt) {
         grunt.initConfig({
             jshint: {
@@ -51,7 +50,6 @@ Example:
         // Register tasks
         grunt.registerTask('default', ['githooks', 'jshint']);
     }
-```
 
 Run Grunt Git Hooks as a test:
 
