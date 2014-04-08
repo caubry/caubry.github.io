@@ -46,16 +46,21 @@
     <h1>Git hooks for jshint node module with Grunt</h1>
     <p><strong>Install Grunt Git hooks</strong> (Assuming that jshint is already running)</p>
 
-<p>This hook will be run before each commit.<br />Create a package.json to be executed when running: npm install</p>
+<p>This hook will be run before each commit.<br />
+Create a package.json to be executed when running:
+    npm install</p>
 
-<p>Or simply install grunt-githooks in the project: npm install grunt-githooks –save-dev</p>
+<p>Or simply install grunt-githooks in the project:
+    npm install grunt-githooks –save-dev</p>
 
-<p>Create/update the Gruntfile.js file<br />Example:</p>
+<p>Create/update the Gruntfile.js file<br />
+Example:</p>
 
-<pre><code>    module.exports = function(grunt) {
+<p>```
+    module.exports = function(grunt) {
         grunt.initConfig({
             jshint: {
-              files: [&#39;js/*&#39;],
+              files: [‘js/*’],
               options: {
                 // options here to override JSHint defaults
                 globals: {
@@ -68,32 +73,37 @@
             },
             githooks: {
               all: {
-                &#39;pre-commit&#39;: &#39;jshint&#39;
+                ‘pre-commit’: ‘jshint’
               }
             }
-        });
+        });</p>
 
-        // Load tasks
-        grunt.loadNpmTasks(&#39;grunt-contrib-jshint&#39;);
-        grunt.loadNpmTasks(&#39;grunt-githooks&#39;);
+<pre><code>    // Load tasks
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-githooks');
 
-        // Register tasks
-        grunt.registerTask(&#39;default&#39;, [&#39;githooks&#39;, &#39;jshint&#39;]);
-    }</code></pre>
+    // Register tasks
+    grunt.registerTask('default', ['githooks', 'jshint']);
+} ```
+</code></pre>
 
 <p>Run Grunt Git Hooks as a test:</p>
 
-<pre><code>grunt githooks</code></pre>
+<pre><code>grunt githooks
+</code></pre>
 
 <p><img src="/images/githooks.png" alt="Grunt Githooks Command Screenshot" title="Grunt Githooks Command Screenshot" /></p>
 
-<p>Whenever you want to commit any install packages added as a ‘pre-commit’ will run.<br />Here running jshint module and abort the commit due to jshint warnings:</p>
+<p>Whenever you want to commit any install packages added as a ‘pre-commit’ will run.<br />
+Here running jshint module and abort the commit due to jshint warnings:</p>
 
 <p><img src="/images/warnings-commit.png" alt="Warning Pre commit Command Screenshot" title="Warning Pre commit Command Screenshot" /></p>
 
 <p>Once corrections have been made, you can stage them again (git add -A) and commit your files:</p>
 
 <p><img src="/images/valid-precommit.png" alt="Valid Pre commit Command Screenshot" title="Valid Pre commit Command Screenshot" /></p>
+
+
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

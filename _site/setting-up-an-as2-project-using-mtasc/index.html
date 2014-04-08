@@ -48,63 +48,68 @@
 
 <h4 id="mainas">Main.as</h4>
 
-<p>The static method ‘main’ in Main.as will be used to run MTASC.<br />This is important to include it, as MTASC will make use of it as a single point of entry.<br />See “- main” MTASC option in <a href="#a0">run.sh</a>.</p>
+<p>The static method ‘main’ in Main.as will be used to run MTASC.<br />
+This is important to include it, as MTASC will make use of it as a single point of entry.<br />
+See “- main” MTASC option in <a href="#a0">run.sh</a>.</p>
 
-<pre><code>    import MouseTrail.Interface;
-     
-    class MouseTrail.Main 
+<p>```
+    import MouseTrail.Interface;</p>
+
+<pre><code>class MouseTrail.Main 
+{
+    private static var m:Main;
+    var int:Interface;
+ 
+    public function Main(root:MovieClip)
     {
-        private static var m:Main;
-        var int:Interface;
-     
-        public function Main(root:MovieClip)
-        {
-            int = new Interface(root);
-        }
-     
-        public static function main(root:MovieClip)
-        {
-            m = new Main(root);
-        }
-    }</code></pre>
+        int = new Interface(root);
+    }
+ 
+    public static function main(root:MovieClip)
+    {
+        m = new Main(root);
+    }
+} ```
+</code></pre>
 
 <h4 id="interfaceas">Interface.as</h4>
 
 <p>You can now use any Classes you want from your library, because of the “-cp” MTASC option.</p>
 
-<pre><code>class MouseTrail.Interface
+<p>```
+class MouseTrail.Interface
 {
-    private var pen:MovieClip;
- 
-    public function Interface (root:MovieClip)
-    {
-        var c:MovieClip= root.createEmptyMovieClip(&quot;test&quot;, root.getNextHighestDepth());
-        
-        // Do something
-    }
-}</code></pre>
+    private var pen:MovieClip;</p>
 
-<p><a name='a0'>run.sh</a></p>
+<pre><code>public function Interface (root:MovieClip)
+{
+    var c:MovieClip= root.createEmptyMovieClip("test", root.getNextHighestDepth());
+    
+    // Do something
+} } ```
+</code></pre>
+
+<p><a name="a0">run.sh</a></p>
 
 <p>This script contains the MTASC command line, with four options:</p>
 
 <ul>
-<li>“-swf” refers to your input.</li>
-
-<li>“-main” refers to your static method (see above).</li>
-
-<li>“-out” refers to your output.</li>
-
-<li>“-cp” refers to your classes root folder.</li>
+  <li>“-swf” refers to your input.</li>
+  <li>“-main” refers to your static method (see above).</li>
+  <li>“-out” refers to your output.</li>
+  <li>“-cp” refers to your classes root folder.</li>
 </ul>
 
-<pre><code># !/bin/bash
+<p><code>
+# !/bin/bash
 ROOT= ~/Desktop/TODO
 mtasc $ROOT/mousetrail/src/MouseTrail/Main.as -main 
 -swf $ROOT/mousetrail/bin/mouseTrail.swf 
 -out $ROOT/mousetrail/bin/Interface.swf 
 -cp $ROOT/mousetrail/src
-open $ROOT/mousetrail/bin/Interface.swf</code></pre>
+open $ROOT/mousetrail/bin/Interface.swf
+</code></p>
+
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
