@@ -45,7 +45,7 @@
 	</span>
     <h1>Extract assets from a SWF - Using swfttools</h1>
     <p>Today, I was wondering if it was possible to extract assets from a SWF file.<br />
-The answer is YES it is! And it isn’t too hard either.</p>
+The answer is YES it is! And it isn&rsquo;t too hard either.</p>
 
 <ul>
   <li><strong>Download swftools</strong></li>
@@ -67,18 +67,18 @@ If you wish to see more information on different programs that swftools offers, 
 
 <p>There are two ways to install swftools, by the source code (recommended for Unix/Linux/BSD) or by running a binary file (recommended for Windows).<br />
 Further information can be found at: <a href="http://wiki.swftools.org/wiki/Installation">http://wiki.swftools.org/wiki/Installation</a>.<br />
-Once the installation is over, you should be able to run, in your command line ‘man swfextract’ and get the manual for this specific program.<br />
-If you can’t achieve this, please refer back to the installation guide, as you might have missed a trick or two:</p>
+Once the installation is over, you should be able to run, in your command line &lsquo;man swfextract&rsquo; and get the manual for this specific program.<br />
+If you can&rsquo;t achieve this, please refer back to the installation guide, as you might have missed a trick or two:</p>
 
 <p><strong>Let the fun begin!</strong></p>
 
-<p>I’ve downloaded a panda.swf and I’ve saved it on my Desktop.<br />
+<p>I&rsquo;ve downloaded a panda.swf and I&rsquo;ve saved it on my Desktop.<br />
 If I wish to see what is inside this file, I can simply run this command from my Desktop directory:</p>
 
 <pre><code>swfextract panda.swf
 </code></pre>
 
-<p>Now, I’m getting something like:</p>
+<p>Now, I&rsquo;m getting something like:</p>
 
 <pre><code>Objects in file panda.swf:
   [-i] 36 Shapes: ID(s) 28, 30, 33, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 87, 91, 119, 120, 123, 129, 130, 143
@@ -111,9 +111,9 @@ To output a binary into a custon file name, such as myBinaryFile, simply run:</p
 <pre><code>swfextract -b [ID] [input file] -o [output file]
 </code></pre>
 
-<p>Note that I didn’t give an extension name to the output, so you can test if it is a Flash file, by simply open it.<br />
-You should get a Flash error… if you do, you know it’s a Flash file : D<br />
-If you don’t, you might want to try a different Binarys ID.</p>
+<p>Note that I didn&rsquo;t give an extension name to the output, so you can test if it is a Flash file, by simply open it.<br />
+You should get a Flash error&hellip; if you do, you know it&rsquo;s a Flash file : D<br />
+If you don&rsquo;t, you might want to try a different Binarys ID.</p>
 
 <p>If it is a Flash file, you can output it the same way as earlier, using swfextract:</p>
 
@@ -125,7 +125,7 @@ If you don’t, you might want to try a different Binarys ID.</p>
 <pre><code>[-s] 26 Sounds: ID(s) 2-26, 92
 </code></pre>
 
-<p>Sounds will be placed into a folder named ‘sounds’, in the current directory:</p>
+<p>Sounds will be placed into a folder named &lsquo;sounds&rsquo;, in the current directory:</p>
 
 <pre><code># !/bin/bash
 for NUM in {2..26} 92
