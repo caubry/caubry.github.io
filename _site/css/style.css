@@ -7,9 +7,10 @@ body {
 }
 
 body,
-#header-inner span#logo {
+#header-inner h1#logo {
     font-family: 'Muli', sans-serif;
     font-size: 1.3em;
+    font-weight: normal;
 }
 
 header[role="banner"] {
@@ -63,22 +64,27 @@ header[role="banner"] .email:hover {
     background-position: 0px 32px;
 }
 
-#header-inner span#logo a {
+#header-inner #left-header h1#logo {
     color: #333;
-    margin-right: 27px;
+    margin: 0 27px 0 0;
+    display: inline-block;
 }
 
-#header-inner span#logo a:hover {
+#header-inner #left-header h1#logo a {
+    color: #333;
+}
+
+#header-inner #left-header h1#logo a:hover {
     color: #CF5014;
 }
 
-#header-inner span a {
+#header-inner #left-header a {
     font-size: 0.8em;
     color: #685757;
     text-decoration: none;
 }
 
-#header-inner span a:hover {
+#header-inner #left-header a:hover {
     color: #CF5014;
 }
 
