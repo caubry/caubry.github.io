@@ -4,7 +4,7 @@ title: "Cyberpunk Jam 2014"
 date: 2014-03-31 12:56:00.000000000 +00:00
 ---
 
-##Fused - ranked #42
+###Fused - ranked #42
 
 ![Fused Screenshot](/images/fused_screenshot.png "Fused Screenshot")
 

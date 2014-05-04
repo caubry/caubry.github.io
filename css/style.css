@@ -155,7 +155,7 @@ h1, h2 {
     margin-bottom: 1.6em;
 }
 
-h1 a {
+h2 a {
     text-decoration: none;
     color: #222;
 }
@@ -199,7 +199,7 @@ table th {
     font-weight: bold;
 }
 
-.entry-content h1 {
+.entry-content h2 {
     display: inline-block;
     font-size: .7em;
 }
@@ -235,7 +235,7 @@ table th {
     line-height: 25px;
 }
 
-.entry-content h1 a:hover {
+.entry-content h2 a:hover {
     color: #CF5014;
 }
 
@@ -244,7 +244,7 @@ table th {
     line-height: 1.4em;
 }
 
-#post h1 {
+#post h2 {
     margin-bottom: 40px;
     font-size: .8em;
     border-bottom: 1px dotted #ddd;
