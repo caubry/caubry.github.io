@@ -11,7 +11,7 @@
         <link rel="shortcut icon" href="/favicon.gif">
 
         <!-- Font -->
-        <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Muli:400,300italic,400italic' rel='stylesheet' type='text/css'>
 
         <!-- Common stylesheet -->
         <link rel="stylesheet" href="/css/reset.css" type="text/css" />
@@ -46,13 +46,13 @@
 		2013
 	</span>
     <h2>Setting up an AS2 project using MTASC</h2>
-    <p>It&rsquo;s sometimes easy to forget the different steps in setting up your development environment as it doesn&rsquo;t often need doing. Here are the simple steps I took when setting up MTASC for AS2.</p>
+    <p>It&#8217;s sometimes easy to forget the different steps in setting up your development environment as it doesn&#8217;t often need doing. Here are the simple steps I took when setting up MTASC for AS2.</p>
 
 <h3 id="mainas">Main.as</h3>
 
-<p>The static method &lsquo;main&rsquo; in Main.as will be used to run MTASC.<br />
-This is important to include it, as MTASC will make use of it as a single point of entry.<br />
-See &ldquo;- main&rdquo; MTASC option in <a href="#a0">run.sh</a>.</p>
+<p>The static method &#8216;main&#8217; in Main.as will be used to run MTASC.  <br />
+This is important to include it, as MTASC will make use of it as a single point of entry.  <br />
+See &#8220;- main&#8221; MTASC option in <a href="#a0">run.sh</a>.</p>
 
 <pre><code>import MouseTrail.Interface;
  
@@ -75,7 +75,7 @@ class MouseTrail.Main
 
 <h3 id="interfaceas">Interface.as</h3>
 
-<p>You can now use any Classes you want from your library, because of the &ldquo;-cp&rdquo; MTASC option.</p>
+<p>You can now use any Classes you want from your library, because of the &#8220;-cp&#8221; MTASC option.</p>
 
 <pre><code>class MouseTrail.Interface
 {
@@ -95,10 +95,10 @@ class MouseTrail.Main
 <p>This script contains the MTASC command line, with four options:</p>
 
 <ul>
-  <li>&ldquo;-swf&rdquo; refers to your input.</li>
-  <li>&ldquo;-main&rdquo; refers to your static method (see above).</li>
-  <li>&ldquo;-out&rdquo; refers to your output.</li>
-  <li>&ldquo;-cp&rdquo; refers to your classes root folder.  </li>
+  <li>&#8220;-swf&#8221; refers to your input.</li>
+  <li>&#8220;-main&#8221; refers to your static method (see above).</li>
+  <li>&#8220;-out&#8221; refers to your output.</li>
+  <li>&#8220;-cp&#8221; refers to your classes root folder.  </li>
 </ul>
 
 <p>Example:</p>

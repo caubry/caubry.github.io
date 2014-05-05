@@ -11,7 +11,7 @@
         <link rel="shortcut icon" href="/favicon.gif">
 
         <!-- Font -->
-        <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Muli:400,300italic,400italic' rel='stylesheet' type='text/css'>
 
         <!-- Common stylesheet -->
         <link rel="stylesheet" href="/css/reset.css" type="text/css" />
@@ -46,12 +46,12 @@
 		2014
 	</span>
     <h2>JavaScript animation using requestAnimationFrame and set a FPS</h2>
-    <p>Commonly, creating animations in JavaScript requires the use of <strong>setTimeout</strong> and/or <strong>setInterval</strong>.
-Unfortunately, relying on these methods only can cause issues to the users, as elucidated to on the <a href="http://creativejs.com/resources/requestanimationframe/">CreativeJS site</a>. When using <strong>setTimeout</strong>, the browser doesn&rsquo;t take into consideration if the page has been hidden behind a tab and can cause some CPU and/or animation issues. This method also doesn&rsquo;t take into account computer performance and will contently try to update the page, disregarding CPU usage.<br />
-Clearly not good for the lifetime of any device&hellip;<br />
-Modern browsers such as Mozilla, Chrome and Safari offer an alternative to the methods above, with a <strong>requestAnimationFrame</strong> function. It provides a native API for running any type of animation in the browser.<br />
-Unfortunately, as it&rsquo;s an API, it&rsquo;s only currently available in browsers via a vendor prefix.<br />
-Luckily, Eric M”ller, Paul Irish and Tino Zijdel have created a <a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">polyfill</a> to get around this issue:<br />
+    <p>Commonly, creating animations in JavaScript requires the use of <strong>setTimeout</strong> and/or <strong>setInterval</strong>.<br />
+Unfortunately, relying on these methods only can cause issues to the users, as elucidated to on the <a href="http://creativejs.com/resources/requestanimationframe/">CreativeJS site</a>. When using <strong>setTimeout</strong>, the browser doesn&#8217;t take into consideration if the page has been hidden behind a tab and can cause some CPU and/or animation issues. This method also doesn&#8217;t take into account computer performance and will contently try to update the page, disregarding CPU usage.  <br />
+Clearly not good for the lifetime of any device&#8230;  <br />
+Modern browsers such as Mozilla, Chrome and Safari offer an alternative to the methods above, with a <strong>requestAnimationFrame</strong> function. It provides a native API for running any type of animation in the browser.  <br />
+Unfortunately, as it&#8217;s an API, it&#8217;s only currently available in browsers via a vendor prefix.  <br />
+Luckily, Eric M”ller, Paul Irish and Tino Zijdel have created a <a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/">polyfill</a> to get around this issue:  
 <a href="https://gist.github.com/paulirish/1579671">(Gist)</a></p>
 
 <pre><code>// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
@@ -113,8 +113,8 @@ onKeyUp: function() {
 }
 </code></pre>
 
-<p>That works fine!<br />
-Unfortunately, this doesn&rsquo;t take into account the FPS (frame per seconds) of your game. A work around is to use the method <strong>setTimeout</strong> in conjunction with the polyfill, such as:</p>
+<p>That works fine!  <br />
+Unfortunately, this doesn&#8217;t take into account the FPS (frame per seconds) of your game. A work around is to use the method <strong>setTimeout</strong> in conjunction with the polyfill, such as:</p>
 
 <pre><code>requestId: 0,
 settimeoutID: 0,

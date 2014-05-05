@@ -1,2 +1,4 @@
 permalink: :title
 markdown: kramdown
+kramdown:
+    input: GFM
