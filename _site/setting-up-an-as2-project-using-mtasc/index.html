@@ -46,13 +46,13 @@
 		2013
 	</span>
     <h2>Setting up an AS2 project using MTASC</h2>
-    <p>It&#8217;s sometimes easy to forget the different steps in setting up your development environment as it doesn&#8217;t often need doing. Here are the simple steps I took when setting up MTASC for AS2.</p>
+    <p>It’s sometimes easy to forget the different steps in setting up your development environment as it doesn’t often need doing. Here are the simple steps I took when setting up MTASC for AS2.</p>
 
-<h3 id="mainas">Main.as</h3>
+<p>###Main.as###</p>
 
-<p>The static method &#8216;main&#8217; in Main.as will be used to run MTASC.  <br />
+<p>The static method ‘main’ in Main.as will be used to run MTASC.  <br />
 This is important to include it, as MTASC will make use of it as a single point of entry.  <br />
-See &#8220;- main&#8221; MTASC option in <a href="#a0">run.sh</a>.</p>
+See “- main” MTASC option in <a href="#a0">run.sh</a>.</p>
 
 <pre><code>import MouseTrail.Interface;
  
@@ -73,9 +73,9 @@ class MouseTrail.Main
 }
 </code></pre>
 
-<h3 id="interfaceas">Interface.as</h3>
+<p>###Interface.as###</p>
 
-<p>You can now use any Classes you want from your library, because of the &#8220;-cp&#8221; MTASC option.</p>
+<p>You can now use any Classes you want from your library, because of the “-cp” MTASC option.</p>
 
 <pre><code>class MouseTrail.Interface
 {
@@ -95,10 +95,10 @@ class MouseTrail.Main
 <p>This script contains the MTASC command line, with four options:</p>
 
 <ul>
-  <li>&#8220;-swf&#8221; refers to your input.</li>
-  <li>&#8220;-main&#8221; refers to your static method (see above).</li>
-  <li>&#8220;-out&#8221; refers to your output.</li>
-  <li>&#8220;-cp&#8221; refers to your classes root folder.  </li>
+  <li>“-swf” refers to your input.</li>
+  <li>“-main” refers to your static method (see above).</li>
+  <li>“-out” refers to your output.</li>
+  <li>“-cp” refers to your classes root folder.  </li>
 </ul>
 
 <p>Example:</p>
