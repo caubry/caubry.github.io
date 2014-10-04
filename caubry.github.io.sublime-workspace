@@ -456,10 +456,21 @@
 	"buffers":
 	[
 		{
-			"file": "_posts/2014-05-05-Jasmine-and-CoffeeScript.markdown",
+			"contents": "---\nlayout: post\ntitle: \"Creating a desktop application using Python - wxPython\"\ndate: 2014-07-16 21:00:39.000000000 +01:00\ntags:\n- Python\n- Pubsub\n---\n\n### GUI toolkit ###\nI've chosen wxPython over Tkinter simply because wxPython offers more advanced widgets and uses native operating system widgets. The only downside is that this toolkit isn't part of the standard Python distribution and so, has to be downloaded and installed separately.\nI didn't think much of the latter as I thought I would be able to package the application into an EXE. \n\n### PyPubSub ###\nInstall at:\nhttp://sourceforge.net/projects/pubsub/files/pubsub/\nIt's going to be installed within your Python Lib/site-packages folder.\n",
+			"file": "_posts/2014-07-16-python-notes.markdown",
+			"file_size": 557,
+			"file_write_time": 130500158486216028,
 			"settings":
 			{
-				"buffer_size": 7005,
+				"buffer_size": 702,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_posts/2014-03-31-cyberpunk-jam-2014.markdown",
+			"settings":
+			{
+				"buffer_size": 1352,
 				"line_ending": "Windows"
 			}
 		},
@@ -544,12 +555,14 @@
 	},
 	"file_history":
 	[
+		"/C/workspace/caubry.github.io/_posts/2014-05-05-Jasmine-and-CoffeeScript.markdown",
+		"/C/RubyDevKit/config.yml",
+		"/C/RubyDevKit/dk.rb",
 		"/C/workspace/caubry.github.io/_posts/2012-10-03-flashdevelop-for-as3.markdown",
 		"/C/workspace/caubry.github.io/_config.yml",
 		"/C/workspace/caubry.github.io/index.html",
 		"/C/workspace/caubry.github.io/_layouts/default.html",
 		"/C/workspace/caubry.github.io/css/style.css",
-		"/C/workspace/caubry.github.io/_posts/2014-05-05-Jasmine-and-CoffeeScript.markdown",
 		"/C/workspace/caubry.github.io/_layouts/post.html",
 		"/C/workspace/caubry.github.io/_posts/2013-02-01-setting-up-an-as2-project-using-mtasc.markdown",
 		"/C/workspace/caubry.github.io/_posts/2014-03-31-cyberpunk-jam-2014.markdown",
@@ -669,9 +682,7 @@
 		"/C/workspace/caubry.github.io/source/stylesheets/syntax.css",
 		"/C/workspace/caubry.github.io/source/css/syntax.css",
 		"/C/workspace/caubry.github.io/source/stylesheets/screen.css",
-		"/C/workspace/caubry.github.io/public/about/index.html",
-		"/C/workspace/caubry.github.io_OLD/caubry.github.io/_posts/2012-10-03-about.markdown",
-		"/C/workspace/caubry.github.io/source/projects/index.markdown"
+		"/C/workspace/caubry.github.io/public/about/index.html"
 	],
 	"find":
 	{
@@ -856,19 +867,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "_posts/2014-05-05-Jasmine-and-CoffeeScript.markdown",
+					"file": "_posts/2014-07-16-python-notes.markdown",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7005,
+						"buffer_size": 702,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4525,
-								4525
+								702,
+								702
 							]
 						],
 						"settings":
@@ -876,7 +887,7 @@
 							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1379.0,
+						"translation.y": 10.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -884,6 +895,34 @@
 				},
 				{
 					"buffer": 1,
+					"file": "_posts/2014-03-31-cyberpunk-jam-2014.markdown",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1352,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "css/style.css",
 					"semi_transient": false,
 					"settings":
@@ -909,7 +948,7 @@
 						"translation.y": 4715.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
