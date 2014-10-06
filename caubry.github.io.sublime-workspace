@@ -456,29 +456,38 @@
 	"buffers":
 	[
 		{
-			"contents": "---\nlayout: post\ntitle: \"Creating a desktop application using Python - wxPython\"\ndate: 2014-07-16 21:00:39.000000000 +01:00\ntags:\n- Python\n- Pubsub\n---\n\n### GUI toolkit ###\nI've chosen wxPython over Tkinter simply because wxPython offers more advanced widgets and uses native operating system widgets. The only downside is that this toolkit isn't part of the standard Python distribution and so, has to be downloaded and installed separately.\nI didn't think much of the latter as I thought I would be able to package the application into an EXE. \n\n### PyPubSub ###\nInstall at:\nhttp://sourceforge.net/projects/pubsub/files/pubsub/\nIt's going to be installed within your Python Lib/site-packages folder.\n",
 			"file": "_posts/2014-07-16-python-notes.markdown",
-			"file_size": 557,
-			"file_write_time": 130500158486216028,
 			"settings":
 			{
-				"buffer_size": 702,
+				"buffer_size": 2633,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "_posts/2014-03-31-cyberpunk-jam-2014.markdown",
+			"contents": "---\nlayout: post\ntitle: \"Getting to know SDL\"\ndate: 2014-07-16 21:00:39.000000000 +01:00\ntags:\n- SDL\n---\n\nSDL\nhttp://wiki.libsdl.org/Introduction\nhttp://lazyfoo.net/tutorials/SDL/index.php",
+			"file": "_posts/2014-10-04-.markdown",
+			"file_size": 2670,
+			"file_write_time": 130569132733882849,
 			"settings":
 			{
-				"buffer_size": 1352,
+				"buffer_size": 188,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "css/style.css",
+			"contents": "C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\Windows Live;%SystemRoot%\\system32;%SystemRoot%;%SystemRoot%\\System32\\Wbem;%SYSTEMROOT%\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\TortoiseSVN\\bin;c:\\putty;c:\\progra~1\\mtasc;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Zend\\ZendServer\\bin;C:\\Program Files (x86)\\Zend\\ZendServer\\share\\ZendFramework\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\MinGW\\bin;C:\\Program Files (x86)\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\",
 			"settings":
 			{
-				"buffer_size": 6205,
+				"buffer_size": 956,
+				"line_ending": "Windows",
+				"name": "C:\\Program Files\\Common Files\\Microsoft Shared\\Win"
+			}
+		},
+		{
+			"file": "/C/workspace/CITY-University/c+/SDL/01_hello_SDL/01_hello_SDL.cpp",
+			"settings":
+			{
+				"buffer_size": 1308,
 				"line_ending": "Windows"
 			}
 		}
@@ -553,8 +562,16 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/workspace/caubry.github.io",
+		"/C/workspace/caubry.github.io/_posts"
+	],
 	"file_history":
 	[
+		"/C/workspace/caubry.github.io/_posts/2013-02-01-setting-up-an-as2-project-using-mtasc.markdown",
+		"/C/workspace/caubry.github.io/_posts/2014-03-31-cyberpunk-jam-2014.markdown",
+		"/C/workspace/caubry.github.io/css/style.css",
 		"/C/workspace/caubry.github.io/_posts/2014-05-05-Jasmine-and-CoffeeScript.markdown",
 		"/C/RubyDevKit/config.yml",
 		"/C/RubyDevKit/dk.rb",
@@ -562,10 +579,7 @@
 		"/C/workspace/caubry.github.io/_config.yml",
 		"/C/workspace/caubry.github.io/index.html",
 		"/C/workspace/caubry.github.io/_layouts/default.html",
-		"/C/workspace/caubry.github.io/css/style.css",
 		"/C/workspace/caubry.github.io/_layouts/post.html",
-		"/C/workspace/caubry.github.io/_posts/2013-02-01-setting-up-an-as2-project-using-mtasc.markdown",
-		"/C/workspace/caubry.github.io/_posts/2014-03-31-cyberpunk-jam-2014.markdown",
 		"/C/workspace/iwg/jasmine-and-coffeescript-template/package.json",
 		"/C/workspace/iwg/jasmine-and-coffeescript-template/README.md",
 		"/C/workspace/iwg/volcanic-cash-mobile/test/src/js/coreSpec.js",
@@ -862,7 +876,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -871,43 +885,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 702,
+						"buffer_size": 2633,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								702,
-								702
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 10.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_posts/2014-03-31-cyberpunk-jam-2014.markdown",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1352,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								152,
+								152
 							]
 						],
 						"settings":
@@ -918,37 +904,92 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "css/style.css",
+					"buffer": 1,
+					"file": "_posts/2014-10-04-.markdown",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6205,
+						"buffer_size": 188,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5069,
-								5069
+								188,
+								188
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 4715.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 956,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								808,
+								613
+							]
+						],
+						"settings":
+						{
+							"auto_name": "C:\\Program Files\\Common Files\\Microsoft Shared\\Win",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/workspace/CITY-University/c+/SDL/01_hello_SDL/01_hello_SDL.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1308,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								170,
+								170
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1023,6 +1064,7 @@
 		],
 		"width": 0.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -1030,7 +1072,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 361.0,
+	"side_bar_width": 280.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
