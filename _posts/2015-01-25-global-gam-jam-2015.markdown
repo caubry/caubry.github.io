@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Global Game Jam (GGJ) 2015"
+date: 2015-01-10 12:00:00.000000000 +01:00
+tags:
+- jam
+- ggj
+---
+
+###Global Game Jam 2015 - London
+
+![Run for cream](/images/runforcreamscreen.png "Run for cream")
+
+I've just come back from the Global Game Jam 2015 event in London and I'm exhausted.   
+This gaming hackathon allowed my team and I to create a local multi-player game between Friday 5pm and today, Sunday 5pm.   
+So here is what we managed to achieve within this time frame:   
+
+###Run For Cream by the Angry Tigers team
+
+The aim of is to grab the ice cream before your friends! You can use gamepads or the keyboard, up to 4 players. 
+
+The technology that we've used to create this game is Haxe in conjuction with Flixel, also known as HaxeFlixel.
+We first thought of using ActionScript 3 with the framework Flixel, but as we wanted to use the control pad and allow the game to be crossed platform, we decided to go with Haxe; a first for myself, as well as the second programmer :]   
+
+![Team - Angry Tigers](/images/gamejam15.jpg "Team - Angry Tigers")
+
+From left to right:
+Chloe De Castro Leon - the very talented artist;
+Myself - in charge of the gameplay and the core programming;
+Ronan Roquais - in charge of the progrmamming and the level design.
+
+You can view more details about the game on the [Global Game Jam website](http://globalgamejam.org/2015/games/run-cream)
