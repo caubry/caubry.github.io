@@ -7,7 +7,7 @@ tags:
 - ggj
 ---
 
-###Global Game Jam 2015 - London
+### Global Game Jam 2015 - London ###
 
 ![Run for cream](/images/runforcreamscreen.png "Run for cream")
 
@@ -15,7 +15,7 @@ I've just come back from the Global Game Jam 2015 event in London and I'm exhaus
 This gaming hackathon allowed my team and I to create a local multi-player game between Friday 5pm and today, Sunday 5pm.   
 So here is what we managed to achieve within this time frame:   
 
-###Run For Cream by the Angry Tigers team
+### Run For Cream by the Angry Tigers team ###
 
 The aim of is to grab the ice cream before your friends! You can use gamepads or the keyboard, up to 4 players. 
 
