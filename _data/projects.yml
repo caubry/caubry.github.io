@@ -1,3 +1,10 @@
+- name: Run For Cream
+  image: /images/runforcream.png
+  link: /runforcream
+  status: Prototype Completed
+  folder: Archived
+  description: HaxeFlixel game created for the Global Game Jam 2015 in London.
+
 - name: SublimeFlash
   image: /images/sublimeflash.png
   link: https://github.com/caubry/SublimeFlash
@@ -35,4 +42,3 @@
   status: Completed
   folder: Archived
   description: ActionScript 2 Game created while studying BA(Hons) Games Design.
-
