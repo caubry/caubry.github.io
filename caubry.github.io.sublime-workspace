@@ -456,38 +456,26 @@
 	"buffers":
 	[
 		{
-			"file": "_posts/2014-07-16-python-notes.markdown",
+			"file": "_data/projects.yml",
 			"settings":
 			{
-				"buffer_size": 2633,
+				"buffer_size": 1518,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "---\nlayout: post\ntitle: \"Getting to know SDL\"\ndate: 2014-07-16 21:00:39.000000000 +01:00\ntags:\n- SDL\n---\n\nSDL\nhttp://wiki.libsdl.org/Introduction\nhttp://lazyfoo.net/tutorials/SDL/index.php",
-			"file": "_posts/2014-10-04-.markdown",
-			"file_size": 2670,
-			"file_write_time": 130569132733882849,
+			"file": "runforcream/index.html",
 			"settings":
 			{
-				"buffer_size": 188,
+				"buffer_size": 115,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\Windows Live;%SystemRoot%\\system32;%SystemRoot%;%SystemRoot%\\System32\\Wbem;%SYSTEMROOT%\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Autodesk\\Backburner\\;C:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files\\TortoiseSVN\\bin;c:\\putty;c:\\progra~1\\mtasc;C:\\Program Files (x86)\\Git\\cmd;C:\\Program Files (x86)\\Git\\bin;C:\\Program Files (x86)\\Zend\\ZendServer\\bin;C:\\Program Files (x86)\\Zend\\ZendServer\\share\\ZendFramework\\bin;C:\\Program Files (x86)\\QuickTime\\QTSystem\\;C:\\MinGW\\bin;C:\\Program Files (x86)\\nodejs\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\",
+			"file": "honeytrail/index.html",
 			"settings":
 			{
-				"buffer_size": 956,
-				"line_ending": "Windows",
-				"name": "C:\\Program Files\\Common Files\\Microsoft Shared\\Win"
-			}
-		},
-		{
-			"file": "/C/workspace/CITY-University/c+/SDL/01_hello_SDL/01_hello_SDL.cpp",
-			"settings":
-			{
-				"buffer_size": 1308,
+				"buffer_size": 118,
 				"line_ending": "Windows"
 			}
 		}
@@ -564,11 +552,21 @@
 	},
 	"expanded_folders":
 	[
-		"/C/workspace/caubry.github.io",
-		"/C/workspace/caubry.github.io/_posts"
+		"/C/workspace/projects/personal/repos/caubry.github.io",
+		"/C/workspace/projects/personal/repos/caubry.github.io/_data",
+		"/C/workspace/projects/personal/repos/caubry.github.io/_layouts",
+		"/C/workspace/projects/personal/repos/caubry.github.io/_posts",
+		"/C/workspace/projects/personal/repos/caubry.github.io/blucrusader",
+		"/C/workspace/projects/personal/repos/caubry.github.io/honeytrail",
+		"/C/workspace/projects/personal/repos/caubry.github.io/projects",
+		"/C/workspace/projects/personal/repos/caubry.github.io/runforcream"
 	],
 	"file_history":
 	[
+		"/C/workspace/projects/personal/repos/caubry.github.io/runforcream/index.html",
+		"/C/workspace/projects/personal/repos/caubry.github.io/_posts/2014-07-16-python-notes.markdown",
+		"/C/workspace/projects/personal/repos/caubry.github.io/_posts/2014-10-04-.markdown",
+		"/C/workspace/CITY-University/c+/SDL/01_hello_SDL/01_hello_SDL.cpp",
 		"/C/workspace/caubry.github.io/_posts/2013-02-01-setting-up-an-as2-project-using-mtasc.markdown",
 		"/C/workspace/caubry.github.io/_posts/2014-03-31-cyberpunk-jam-2014.markdown",
 		"/C/workspace/caubry.github.io/css/style.css",
@@ -692,11 +690,7 @@
 		"/C/workspace/caubry.github.io/source/_layouts/page.html",
 		"/C/workspace/caubry.github.io/source/index.html",
 		"/C/workspace/caubry.github.io/source/_layouts/homepage.html",
-		"/C/workspace/caubry.github.io/source/about/index.html",
-		"/C/workspace/caubry.github.io/source/stylesheets/syntax.css",
-		"/C/workspace/caubry.github.io/source/css/syntax.css",
-		"/C/workspace/caubry.github.io/source/stylesheets/screen.css",
-		"/C/workspace/caubry.github.io/public/about/index.html"
+		"/C/workspace/caubry.github.io/source/about/index.html"
 	],
 	"find":
 	{
@@ -876,57 +870,31 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "_posts/2014-07-16-python-notes.markdown",
+					"file": "_data/projects.yml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2633,
+						"buffer_size": 1518,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								152,
-								152
+								64,
+								75
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_posts/2014-10-04-.markdown",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 188,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								188,
-								188
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -936,60 +904,59 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
+					"file": "runforcream/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 956,
+						"buffer_size": 115,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								808,
-								613
+								23,
+								23
 							]
 						],
 						"settings":
 						{
-							"auto_name": "C:\\Program Files\\Common Files\\Microsoft Shared\\Win",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/workspace/CITY-University/c+/SDL/01_hello_SDL/01_hello_SDL.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1308,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								170,
-								170
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "honeytrail/index.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								55,
+								52
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
