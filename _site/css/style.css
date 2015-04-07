@@ -1,17 +1,6 @@
-body {
-    color: #222;
-    background: #fff;
-    padding: 0;
-    text-align: justify;
-    background-color: #f5f5f5;
-}
-
-body,
-#header-inner h1#logo {
-    font-family: 'Muli', sans-serif;
-    font-size: 1.3em;
-    font-weight: normal;
-}
+/*****************************
+*********** HEADER ***********
+******************************/
 
 header[role="banner"] {
     padding: 35px 50px;
@@ -31,6 +20,8 @@ header[role="banner"] #social a.social {
     height: 32px;
     width: 32px;
 }
+
+/* Social */
 
 header[role="banner"] .github {
     background-position: 96px 0px;
@@ -64,6 +55,8 @@ header[role="banner"] .email:hover {
     background-position: 0px 32px;
 }
 
+/****************/
+
 #header-inner #left-header h1#logo {
     color: #333;
     margin: 0 27px 0 0;
@@ -88,14 +81,34 @@ header[role="banner"] .email:hover {
     color: #CF5014;
 }
 
+/*****************************
+************ BODY ************
+******************************/
+
+
+body {
+    color: #222;
+    background: #fff;
+    padding: 0;
+    text-align: justify;
+    background-color: #f5f5f5;
+}
+
+body,
+#header-inner h1#logo {
+    font-family: 'Muli', sans-serif;
+    font-size: 1.3em;
+    font-weight: normal;
+}
+
 #post-content {
     margin: 0 auto;
-    padding: 50px 50px 1px 50px;
+    padding: 50px 0 1px 50px;
     background-color: #fff;
 }
 
 #wrap {
-    max-width: 920px;
+    max-width: 700px;
     margin: 0 auto 2em;
     position: relative;
 }
@@ -118,7 +131,6 @@ header[role="banner"] .email:hover {
 
 .entry-content, .entry-date {
     float: left;
-    margin-right: 30px;
 }
 
 .entry-content .date {
@@ -127,10 +139,12 @@ header[role="banner"] .email:hover {
     min-width: 68px;
     display: inline-block;
     text-transform: uppercase;
+    float: left;
 }
 
 .entry-content {
     border-bottom: 1px dotted #ddd;
+    width: 515px;
 }
 
 .entry-list .entry-post:last-child .entry-content {
@@ -139,6 +153,7 @@ header[role="banner"] .email:hover {
 
 .entry-post {
     margin-bottom: 1em;
+    min-width: 600px;
 }
 
 h1 {
@@ -187,6 +202,12 @@ embed {
     margin-bottom: 10px;
 }
 
+.img-medium {
+    width: 500px; 
+    display: block;
+    margin: 20px auto;
+}
+
 table {
     width: 100%;
     overflow: auto;
@@ -218,6 +239,9 @@ table th {
 .entry-content h2 {
     display: inline-block;
     font-size: .7em;
+    text-align: left;
+    max-width: 414px;
+    float: left;
 }
 
 .project-title a {
@@ -304,6 +328,12 @@ table th {
     background: transparent;
 }
 
+
+/*****************************
+********** FOOTER ************
+******************************/
+
+
 #footer {
     border-top: 1px solid #ddd;
     margin-top: 1em;
@@ -331,6 +361,7 @@ table th {
 
 #footer #power {
     font-size: smaller;
+    font-size: 0.7em;
     margin-top: 0.7em;
     float: right;
     color: #685757;

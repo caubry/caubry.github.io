@@ -27,6 +27,6 @@ We first thought of using ActionScript 3 with the framework Flixel, but as we wa
 From left to right:
 Chloe De Castro Leon - the very talented artist;
 Myself - in charge of the gameplay and the core programming;
-Ronan Roquais - in charge of the progrmamming and the level design.
+Ronan Roquais - in charge of the programming and the level design.
 
 You can view more details about the game on the [Global Game Jam website](http://globalgamejam.org/2015/games/run-cream)
