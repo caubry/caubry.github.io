@@ -8,7 +8,7 @@ tags:
 Today, I was wondering if it was possible to extract assets from a SWF file.  
 The answer is YES it is! And it isn't too hard either.
 
-* **Download swftools**
+### Download swftools ###
 
 Firstly, **get/download a SWF** file from your machine/the internet : ]  
 Then, you can either download the **swfttools** as an EXE or as a TAR at: [http://www.swftools.org/download.html](http://www.swftools.org/download.html)  
@@ -19,7 +19,7 @@ If you are a __Github__ lover, simply grab the repo, such as:
 In order to extract assets from a SWF file, you can use the **SWFExtract program** provided with **swftools**.  
 If you wish to see more information on different programs that swftools offers, visit this page: [http://www.swftools.org/about.html](http://www.swftools.org/about.html).
 
-* **Install swftools**
+### Install swftools ###
 
 There are two ways to install swftools, by the source code (recommended for Unix/Linux/BSD) or by running a binary file (recommended for Windows).  
 Further information can be found at: [http://wiki.swftools.org/wiki/Installation](http://wiki.swftools.org/wiki/Installation).  

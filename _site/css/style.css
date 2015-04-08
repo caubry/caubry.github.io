@@ -103,7 +103,7 @@ body,
 
 #post-content {
     margin: 0 auto;
-    padding: 50px 0 1px 50px;
+    padding: 50px 50px 1px 50px;
     background-color: #fff;
 }
 
@@ -202,8 +202,32 @@ embed {
     margin-bottom: 10px;
 }
 
+.img-two-columns {
+    width: 49%;
+}
+
+.img-left {
+    float: left;
+}
+
+.img-right {
+    float: right;
+}
+
 .img-medium {
     width: 500px; 
+    display: block;
+    margin: 20px auto;
+}
+
+.img-small {
+    width: 300px; 
+    display: block;
+    margin: 20px auto;
+}
+
+.img-thumbnail {
+    width: 200px; 
     display: block;
     margin: 20px auto;
 }

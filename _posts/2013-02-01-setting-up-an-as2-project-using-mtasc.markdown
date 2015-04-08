@@ -7,7 +7,7 @@ tags:
 ---
 It's sometimes easy to forget the different steps in setting up your development environment as it doesn't often need doing. Here are the simple steps I took when setting up MTASC for AS2.
 
-###Main.as###
+### Main.as ###
 
 The static method 'main' in Main.as will be used to run MTASC.  
 This is important to include it, as MTASC will make use of it as a single point of entry.  
@@ -31,7 +31,7 @@ See "- main" MTASC option in [run.sh](#a0).
         }
     }
 
-###Interface.as###
+### Interface.as ###
 
 You can now use any Classes you want from your library, because of the "-cp" MTASC option.
 
@@ -47,7 +47,7 @@ You can now use any Classes you want from your library, because of the "-cp" MTA
         }
     }
 
-<a name="a0">run.sh</a>
+### run.sh ###
 
 
 This script contains the MTASC command line, with four options:
