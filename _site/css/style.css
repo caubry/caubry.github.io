@@ -103,8 +103,12 @@ body,
 
 #post-content {
     margin: 0 auto;
-    padding: 50px 50px 1px 50px;
+    padding: 50px 50px 50px 50px;
     background-color: #fff;
+}
+
+#post-content-asset {
+    text-align: center;
 }
 
 #wrap {
@@ -351,6 +355,19 @@ table th {
     border: none;
     background: transparent;
 }
+
+#project-description {
+    margin-top: 30px;
+    text-align: left;
+}
+
+#project-description p {
+    font-family: 'Muli', sans-serif;
+    font-weight: normal;
+    text-align: justify;
+    line-height: 1.9em;
+} 
+
 
 
 /*****************************

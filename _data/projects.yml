@@ -1,3 +1,10 @@
+- name: Sonic OpenGL 4.0
+  image: /images/sonicopengl.png
+  link: /openglsonic
+  status: Prototype Completed
+  folder: Archived
+  description: OpenGL 4.0 simulation created using C++ for 3D Computer Graphics module as part of my MSc Games Computer Technology.
+
 - name: Run For Cream
   image: /images/runforcream.png
   link: /runforcream
