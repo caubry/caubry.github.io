@@ -9,25 +9,25 @@ tags:
 
 ### EGX Rezzed 2015 - London ###
 
-I've had an amazing time at the EGX Rezzed 2015 in London and I'm definetely up to go there again next year. This post is just to show you what happened during this day and hopefully give you a reason to go there next year :)
+I had an amazing time at EGX Rezzed 2015 in London and I'm definitely up for going there again next year. This post is just to show you what happened during this day and hopefully give you a reason to go there next year :)
 
-<img src="/images/egxrezzed15-dock.JPG" alt="Dock" title="Dock"/>
+<img src="/images/egxrezzed15-dock.JPG" aclt="Dock" title="Dock"/>
 
-Unfortunately, I didn't have time to play every single game, as I believe the event holded something like 50+ games. I however had the chance to liaise with some independant developers and had the pleasure to discover their very unique games.
+Unfortunately, I didn't have time to play every single game, as I believe the event hosted in excess of 50+ games. I, however, had the chance to liaise with some independent developers and had the pleasure to discover their very unique games.
 
-The first game I played at the event is named **Sky Scrappers** and it's a great multi-player platformer. After some googling I found this Youtube [video](https://www.youtube.com/watch?v=HyVZvlpNbkc) interviewing the team and showing the gameplay. 
+The first game I played at the event was named **Sky Scrappers** and is a great multi-player platformer. After some Googling, I found this YouTube [video](https://www.youtube.com/watch?v=HyVZvlpNbkc) interviewing the team and showing the gameplay. 
 
 <img src="/images/egxrezzed15-skyscrappers.JPG" alt="Sky Scrappers" title="Sky Scrappers"/>
 
-I already owe this game named **the Escapists** on Xbox One, but I wanted to check out the booth. Suprisely, I had the pleasure to talk to Chris Dave, the guy behind the title. He explained to me that he created the PC version using Fusion before Team 17 shown interest and redesigned the title a little in order to publish it on Xbox One :)
+The next game I played I already own on Xbox One, but I wanted to check out the booth. **The Escapists** is an interesting game that challenges the player to escape from various high security prisons. I had the pleasure to talk to Chris Dave, the guy behind the title. He explained to me that he created the PC version using Fusion before Team 17 showed an interest, and redesigned the title a little in order to publish it to Xbox One :)
 
 <img src="/images/egxrezzed15-theescapists.JPG" alt="The Escapists" title="The Escapists"/>
 
-I played this survival adventure game named **The flame in the flood** created by The Molasses Flood, for a good fifteen minutes. I really enjoyed the music and the strong narrative behind the title. This is clearly my type of game and I would probably end up buying it :) Again, after a little bit of googling I found their [Kickstarter page](https://www.kickstarter.com/projects/molassesflood/the-flame-in-the-flood)!
+I played this survival adventure game named **The Flame in the Flood** created by The Molasses Flood, for a chunk of time. I really enjoyed the music and the strong narrative behind the title. This is clearly my type of game and I would probably end up buying it :) Again, after a little bit of Googling I found their [Kickstarter page](https://www.kickstarter.com/projects/molassesflood/the-flame-in-the-flood)!
 
 <img src="/images/egxrezzed15-flame.jpg" alt="Flame in the flood" title="Flame in the flood"/>
 
-**Maia** is a very interesting and promising title. I played this title for about 20 minutes, less than the average player with a 50 minutes on the clock :S I enjoyed creating my station somewhere within an unknown galaxy and been given instructions by Simon Roth, the creator. Be careful when playing this game as there are a lot of jokes. So stay straight and enjoy it! :D The team have a [website](http://maiagame.com/) so check it out :) 
+**Maia** is a very interesting and promising title. The player has to create their own space station and help build the colony. I enjoyed creating my station somewhere within an unknown galaxy and was aided by Simon Roth, the creator. Be careful when playing this game as there are plenty of witty instructions and dialogue. So stay straight and enjoy it! :D The team have a [website](http://maiagame.com/) so check it out :) 
 
 <img src="/images/egxrezzed15-maya.JPG" alt="EGX Jam" title="EGX Jam"/>
 
@@ -35,17 +35,17 @@ I've only had a quick glance at this game named **Mushroom 11** and I was very i
 
 <img src="/images/egxrezzed15-mushroom11.JPG" alt="EGX Jam" title="EGX Jam"/>
 
-Amazing alpha version of **RPG Tycoon** and it is already available on [Steam](http://store.steampowered.com/app/314240/). I do love my tycoons and I always enjoy building as well as destroying a population. Adding the RPG style makes it a perfect combination. The only downside it's that I didn't save my progression. Definetely a must owe game :) 
+**RPG Tycoon** is currently on alpha and it is already available on [Steam](http://store.steampowered.com/app/314240/) early access. I do love my tycoons games and I always enjoy building as well as destroying a population. Adding the RPG style makes it a perfect combination. The only downside it's that I didn't save my progression. Definitely a must own game :) 
 
 <img src="/images/egxrezzed15-rpgtycoon.jpg" alt="EGX Jam" title="EGX Jam"/>
 
-Some amazing tech were being showcased on that day. [**Roto VR**](http://invisioncommunity.co.uk/2015/03/16/rezzed-2015-first-look-at-roto-vr/) was one of them. This tech looked amazing and a lot of people seemed to have great fun with it. Unfortunately the waiting time was somewhere between one to two hours and I couldn't afford the miss out on the developer sessions :(
+Not only games were shown at EGX, but also plenty of exciting technology companies were showcasing their innovations. [**Roto VR**](http://invisioncommunity.co.uk/2015/03/16/rezzed-2015-first-look-at-roto-vr/) was one such company. This tech looked amazing and a lot of people seemed to have great fun with it. Unfortunately the waiting time was somewhere between one to two hours and I couldn't afford to miss out on the developer sessions :(
 
 <img src="/images/egxrezzed15-roto.JPG" alt="EGX Jam" title="EGX Jam"/>
 
 Which leads me to talk about these developer sessions. I've only attended two of them, with **Guild Wars 2 - Heart of thorns** and **Life is Strange 2**.
 
-While I've never had a chance yet to play on Life is Strange, I found this developer session interesting. Life is Strange, created by Dontnod Entertainment is an interactive game where the choices you make will have direct impact on the narrative. During this session and with Aoife Wilson as animator, the audience was involved in the decision making of the second episode of the series. After the showcase of this episode, the audience could ask questions to the lead developer himself, with questions from to the sounds to the set of the scene.
+While I haven't yet had a chance to play Life is Strange, I found this developer session intriguing. Life is Strange, created by Dontnod Entertainment is an interactive game where the choices you make will have direct impact on the narrative. During this session and with Aoife Wilson as presenter, the audience was involved in the decision making of the second episode of the series. After the showcase of this episode, the audience asked questions to the lead developer, with questions ranging from audio to scenery art.
 
 <div>
 <img class="img-left, img-two-columns" src="/images/egxrezzed15-lifeisstrange1.JPG" alt="EGX Jam" title="EGX Jam"/>
@@ -53,11 +53,11 @@ While I've never had a chance yet to play on Life is Strange, I found this devel
 <img src="/images/egxrezzed15-lifeisstrangedev2.JPG" alt="EGX Jam" title="EGX Jam"/>
 </div>
 
-One of the reason I wanted to go the Rezzed event was to hear about one of my favourite game, **Guild Wars 2**. Unfortunately I do not play PVP that much and I'm usually more into PVE. That said, I truly enjoyed the talk regarding the new extension for the PVP world as well as discovering the new sceneries and game mechanics. I might even try to play a little bit more of PVP with this upcoming extension :) 
+One of the reason I wanted to go to Rezzed was to hear about one of my favourite games, **Guild Wars 2**. Unfortunately, most of the talks were centred around competitive play. While I don't consider myself much of a PVPer (I'm more into dungeons), I truly enjoyed the talk regarding the new PVP-specific additions, as well as discovering the new sceneries and game mechanics. I might even try to play a little bit more of PVP with this upcoming expansion :) 
 
 <img src="/images/egxrezzed15-gw2.JPG" alt="Guild wars 2" title="Guild wars 2"/>
 
-At the very end of the day, I had the pleasure to check out the demos of the Creative Assembly Game jamers. The teams could pick between three themes from gas prices, Jeremy Clarkson to Terry Pratchers. They've only had around 10 hours to create a game and they were all in one way or another, very impressive.
+At the very end of the day, I had the pleasure to check out the demos of the Creative Assembly Game Jam participants. The teams could pick between three themes from the recent gas prices debates, Jeremy Clarkson and his "fracas" to the death of Terry Pratchett. They had around 10 hours to create a game and they were all in one way or another, very impressive.
 
 <img src="/images/egxrezzed15-jam.JPG" alt="EGX Jam" title="EGX Jam"/>
 
