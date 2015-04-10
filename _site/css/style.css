@@ -103,7 +103,7 @@ body,
 
 #post-content {
     margin: 0 auto;
-    padding: 50px 50px 50px 50px;
+    padding: 50px 50px 20px 50px;
     background-color: #fff;
 }
 
@@ -135,6 +135,7 @@ body,
 
 .entry-content, .entry-date {
     float: left;
+    line-height: 1.3em;
 }
 
 .entry-content .date {
@@ -144,10 +145,12 @@ body,
     display: inline-block;
     text-transform: uppercase;
     float: left;
+    line-height: 1.6em;
 }
 
 .entry-content {
     border-bottom: 1px dotted #ddd;
+    padding-bottom: 0.6em;
     width: 515px;
 }
 
@@ -156,7 +159,7 @@ body,
 }
 
 .entry-post {
-    margin-bottom: 1em;
+    padding-bottom: 0.7em;
     min-width: 600px;
 }
 
@@ -178,7 +181,8 @@ h1, h2, h3 {
 }
 
 h1, h2 {
-    margin-bottom: 1.6em;
+    margin-bottom: 0.3em;
+    line-height: 1.9em;
 }
 
 h2 a {
@@ -204,6 +208,7 @@ p {
 
 embed {
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .img-two-columns {
@@ -277,8 +282,11 @@ table th {
     color: #333;
 }
 
-.project-title {
-    margin: .7em 0 0 0;
+.project-content {
+    display: inline-block;
+    position: relative;
+    margin-top: 5px;
+    margin-left: 116px; 
 }
 
 .project-title a:hover {
@@ -288,6 +296,7 @@ table th {
 .project-list .project {
     margin-top: .7em;
     border-bottom: 1px dotted #ddd;
+    position: relative;
 }
 
 .project-list .project:last-child {
@@ -409,10 +418,11 @@ table th {
 }
 
 .project img {
-    float: left;
-    margin-bottom: 20px;
-    margin-right: 50px;
+    margin-bottom: 23px;
     width: 14%;
+    max-height: 151px;
+    bottom: 0;
+    position: absolute;
 }
 
 img {
