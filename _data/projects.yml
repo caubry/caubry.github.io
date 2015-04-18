@@ -3,6 +3,7 @@
   link: /bulletboids
   status: Prototype Completed
   folder: Archived
+  language: C++
   description: Flocking simulation created using the Bullet Physics Engine for my MSc Computer Games Technology at City University.
 
 - name: Sonic OpenGL 4.0
@@ -10,6 +11,7 @@
   link: /openglsonic
   status: Prototype Completed
   folder: Archived
+  language: C++
   description: OpenGL 4.0 simulation created using C++ for 3D Computer Graphics module as part of my MSc Computer Games Technology.
 
 - name: Run For Cream
@@ -17,30 +19,35 @@
   link: /runforcream
   status: Prototype Completed
   folder: Archived
+  language: Haxe
   description: HaxeFlixel game created for the Global Game Jam 2015 in London.
 
 - name: SublimeFlash
   image: /images/sublimeflash.png
   link: https://github.com/caubry/SublimeFlash
   status: In development
+  language: Shell
   description: A customisable template-based script for creating Actionscript 3 projects ready for compilation by SublimeText.
 
 - name: Bomberman
   image: /images/bomberman.png
   link: https://github.com/caubry/bomberman
   status: In development
+  language: JavaScript
   description: A simple HML5 game copy of Bomberman with websocket.
 
 - name: Image Compression
   image: /images/imagecompression.png
   link: https://gist.github.com/caubry/7103438
   status: Ongoing development
+  language: Bash
   description: Bash script using pngquant and jpegoptim library to compress PNG JPG and JPEG with batch compression as an option.
 
 - name: HoneyTrail
   image: /images/honeytrail.png
   link: /honeytrail
   status: Completed
+  language: Actionscript 3
   description: ActionScript 3 Side scrolling mini-game using right mouse click in order to gather objects and collect points.
 
 - name: Sherwood
@@ -48,6 +55,7 @@
   link: /sherwood
   status: Completed
   folder: Archived
+  language: Actionscript 2
   description: ActionScript 2 Game created while studying BA(Hons) Games Design. 
 
 - name: Blu Crusader
@@ -55,4 +63,5 @@
   link: /blucrusader
   status: Completed
   folder: Archived
+  language: Actionscript 2
   description: ActionScript 2 Game created while studying BA(Hons) Games Design.
