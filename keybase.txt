@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/lilydrop
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://carolineaubry.com
+  * I am lilydrop (https://keybase.io/lilydrop) on keybase.
+  * I have a public key ASBGJR5OhBO6BM2EUYxSIqXwDa22wigpUdnaxjNECK5RHgo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010181c7432956ca03195249448a2e96af4688a098c3456a35bde82b20cb0b841f4b0a",
+            "host": "keybase.io",
+            "kid": "012046251e4e8413ba04cd84518c5222a5f00dadb6c2282951d9dac6334408ae511e0a",
+            "uid": "e5e1e408d3f3421ab07b042463a1a600",
+            "username": "lilydrop"
+        },
+        "service": {
+            "hostname": "carolineaubry.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.20"
+    },
+    "ctime": 1490042790,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1490042777,
+        "hash": "b54a482b667b2bd02fa90bd1d222b406eb5ce7fca5bf427d09673d5cc025fcbb0c69ba71465b26304b8ac279537dd9c636eaa74f820184cd77d7f1fe5611f824",
+        "seqno": 969429
+    },
+    "prev": "6f944cb956d761f23959bfb360a5fc158d3a6fcb28e46467b3b81a336dc6263d",
+    "seqno": 17,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgRiUeToQTugTNhFGMUiKl8A2ttsIoKVHZ2sYzRAiuUR4Kp3BheWxvYWTFAvl7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxODFjNzQzMjk1NmNhMDMxOTUyNDk0NDhhMmU5NmFmNDY4OGEwOThjMzQ1NmEzNWJkZTgyYjIwY2IwYjg0MWY0YjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNDYyNTFlNGU4NDEzYmEwNGNkODQ1MThjNTIyMmE1ZjAwZGFkYjZjMjI4Mjk1MWQ5ZGFjNjMzNDQwOGFlNTExZTBhIiwidWlkIjoiZTVlMWU0MDhkM2YzNDIxYWIwN2IwNDI0NjNhMWE2MDAiLCJ1c2VybmFtZSI6ImxpbHlkcm9wIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJjYXJvbGluZWF1YnJ5LmNvbSIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMjAifSwiY3RpbWUiOjE0OTAwNDI3OTAsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQ5MDA0Mjc3NywiaGFzaCI6ImI1NGE0ODJiNjY3YjJiZDAyZmE5MGJkMWQyMjJiNDA2ZWI1Y2U3ZmNhNWJmNDI3ZDA5NjczZDVjYzAyNWZjYmIwYzY5YmE3MTQ2NWIyNjMwNGI4YWMyNzk1MzdkZDljNjM2ZWFhNzRmODIwMTg0Y2Q3N2Q3ZjFmZTU2MTFmODI0Iiwic2Vxbm8iOjk2OTQyOX0sInByZXYiOiI2Zjk0NGNiOTU2ZDc2MWYyMzk1OWJmYjM2MGE1ZmMxNThkM2E2ZmNiMjhlNDY0NjdiM2I4MWEzMzZkYzYyNjNkIiwic2Vxbm8iOjE3LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQMresoYpu1paqjinJplKn5+SHtpmnoIShlO/Zx4Ta/sKZDbT/Z5B+GROXTWQia6jWKlHpytkyKcfJHNOxJNP9geoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCDXqWa1qcrcy4+nrdevcIQPm9iFcCK9JMutGSAc08V3HqN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/lilydrop
+
+==================================================================
+
